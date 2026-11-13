@@ -1,0 +1,394 @@
+{
+  "sampling_policy": "The 10 positions are the first 10 included physical pages in manifest order, selected before reviewing retrieval results. Scores/reasons completed by inspecting each sampled candidate chunk; B and C use identical chunk text.",
+  "score_scale": {
+    "0": "Cut mid-idea or missing context makes it unclear",
+    "1": "Partly understandable but missing context",
+    "2": "Self-contained and preserves the complete idea"
+  },
+  "items": [
+    {
+      "physical_page": 7,
+      "section": "LLM01:2025",
+      "source_position_anchor": "LLM01:2025 Prompt Injection",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "530d4c5f974d399044363f02a70b2da91e887013c8aa463c73df3d07b952256c",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n3genai.owasp.org\nLLM01:2025 Prompt Injection\nDescription\nA Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in\nunintended ways. These inputs can affect the model even if they are imperceptible to humans,\ntherefore prompt injections do not need to be human-visible/readable, as long as the content is\nparsed by the model.\nPrompt Injection vulnerabilities exist in how models process prompts, and how input may force\nthe"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "b1a0e9a0efb1a82d87c9b667b6dee4a013a8ce120b28a383b1af16dc7a4d6768",
+            "text": "OWASP Top 10 for LLM Applications v2.0 3genai.owasp.org LLM01:2025 Prompt Injection Description A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways. These inputs can affect the model even if they are imperceptible to humans, therefore prompt injections do not need to be human-visible/readable, as long as the content is parsed by the model. Prompt Injection vulnerabilities exist in how models process prompts, and how input may force the model to incorrectly pass prompt data to other parts of the model, potentially causing them to violate guidelines, generate harmful content, enable unauthorized access, or influence critical decisions."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "b1a0e9a0efb1a82d87c9b667b6dee4a013a8ce120b28a383b1af16dc7a4d6768",
+            "text": "OWASP Top 10 for LLM Applications v2.0 3genai.owasp.org LLM01:2025 Prompt Injection Description A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways. These inputs can affect the model even if they are imperceptible to humans, therefore prompt injections do not need to be human-visible/readable, as long as the content is parsed by the model. Prompt Injection vulnerabilities exist in how models process prompts, and how input may force the model to incorrectly pass prompt data to other parts of the model, potentially causing them to violate guidelines, generate harmful content, enable unauthorized access, or influence critical decisions."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "reasons": {
+        "A": "Chunk b?t ??u b?ng heading LLM01 v? gi? tr?n ??nh ngh?a c?ng ph?n gi?i th?ch; t? hi?u ???c.",
+        "B": "Chunk b?t ??u b?ng heading LLM01 v? gi? tr?n ??nh ngh?a c?ng ph?n gi?i th?ch; t? hi?u ???c.",
+        "C": "Chunk b?t ??u b?ng heading LLM01 v? gi? tr?n ??nh ngh?a c?ng ph?n gi?i th?ch; t? hi?u ???c."
+      }
+    },
+    {
+      "physical_page": 8,
+      "section": "LLM01:2025",
+      "source_position_anchor": "the model, alters the behavior of the model in unintended or unexpected ways. Like direct",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "eac2145cb70307274d4c1bab628904129b21faf7e1048da8357e0d5c1068ad2d",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n4genai.owasp.org\nthe model, alters the behavior of the model in unintended or unexpected ways. Like direct\ninjections, indirect injections can be either intentional or unintentional.\nThe severity and nature of the impact of a successful prompt injection attack can vary greatly and\nare largely dependent on both the business context the model operates in, and the agency with\nwhich the model is architected. Generally, however, prompt injection can lead to unin"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "e6ae19961beafdbf9f3e99e4fbee102a79a97ae65ac5bf0402d456423e53eaa5",
+            "text": "OWASP Top 10 for LLM Applications v2.0 4genai.owasp.org the model, alters the behavior of the model in unintended or unexpected ways. Like direct injections, indirect injections can be either intentional or unintentional. The severity and nature of the impact of a successful prompt injection attack can vary greatly and are largely dependent on both the business context the model operates in, and the agency with which the model is architected."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "e6ae19961beafdbf9f3e99e4fbee102a79a97ae65ac5bf0402d456423e53eaa5",
+            "text": "OWASP Top 10 for LLM Applications v2.0 4genai.owasp.org the model, alters the behavior of the model in unintended or unexpected ways. Like direct injections, indirect injections can be either intentional or unintentional. The severity and nature of the impact of a successful prompt injection attack can vary greatly and are largely dependent on both the business context the model operates in, and the agency with which the model is architected."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "reasons": {
+        "A": "Chunk b?t ??u gi?a c?u (?the model...?), thi?u ch? th?/??u m?i c?a ?; ph?n sau cho bi?t ?ang n?i v? prompt injection nh?ng v?n thi?u ng? c?nh ban ??u.",
+        "B": "Chunk b?t ??u gi?a c?u (?the model...?), thi?u ch? th?/??u m?i c?a ?; ph?n sau cho bi?t ?ang n?i v? prompt injection nh?ng v?n thi?u ng? c?nh ban ??u.",
+        "C": "Chunk b?t ??u gi?a c?u (?the model...?), thi?u ch? th?/??u m?i c?a ?; ph?n sau cho bi?t ?ang n?i v? prompt injection nh?ng v?n thi?u ng? c?nh ban ??u."
+      }
+    },
+    {
+      "physical_page": 9,
+      "section": "LLM01:2025",
+      "source_position_anchor": "4. Enforce privilege control and least privilege access",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "031c66997591e488fe9f7e46f6a853b9446de395700f05b2dcd4b76b390f3d7e",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n5genai.owasp.org\n4. Enforce privilege control and least privilege access\nProvide the application with its own API tokens for extensible functionality, and handle these\nfunctions in code rather than providing them to the model. Restrict the model's access\nprivileges to the minimum necessary for its intended operations.\n5. Require human approval for high-risk actions\nImplement human-in-the-loop controls for privileged operations to prevent unauthorized\naction"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "fd25a4d74f8593a61e072fb3355fee6589b5f0c74097db1ac07c9c336b566fe4",
+            "text": "OWASP Top 10 for LLM Applications v2.0 5genai.owasp.org 4. Enforce privilege control and least privilege access Provide the application with its own API tokens for extensible functionality, and handle these functions in code rather than providing them to the model. Restrict the model's access privileges to the minimum necessary for its intended operations. 5. Require human approval for high-risk actions Implement human-in-the-loop controls for privileged operations to prevent unauthorized actions. 6. Segregate and identify external content Separate and clearly denote untrusted content to limit its influence on user prompts. 7."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "fd25a4d74f8593a61e072fb3355fee6589b5f0c74097db1ac07c9c336b566fe4",
+            "text": "OWASP Top 10 for LLM Applications v2.0 5genai.owasp.org 4. Enforce privilege control and least privilege access Provide the application with its own API tokens for extensible functionality, and handle these functions in code rather than providing them to the model. Restrict the model's access privileges to the minimum necessary for its intended operations. 5. Require human approval for high-risk actions Implement human-in-the-loop controls for privileged operations to prevent unauthorized actions. 6. Segregate and identify external content Separate and clearly denote untrusted content to limit its influence on user prompts. 7."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "reasons": {
+        "A": "Chunk gi? tr?n heading v? gi?i th?ch v? privilege control/human approval; ? ch?nh t? hi?u ???c.",
+        "B": "Chunk gi? tr?n heading v? gi?i th?ch v? privilege control/human approval; ? ch?nh t? hi?u ???c.",
+        "C": "Chunk gi? tr?n heading v? gi?i th?ch v? privilege control/human approval; ? ch?nh t? hi?u ???c."
+      }
+    },
+    {
+      "physical_page": 10,
+      "section": "LLM01:2025",
+      "source_position_anchor": "a multimodal AI processes the image and text concurrently, the hidden prompt alters the",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "777505be2b7e5b7590e76cbcb7cd6f155e203faf627e4e2f683d65ce23ecf616",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n6genai.owasp.org\na multimodal AI processes the image and text concurrently, the hidden prompt alters the\nmodel's behavior, potentially leading to unauthorized actions or disclosure of sensitive\ninformation.\nScenario #8: Adversarial Suffix\nAn attacker appends a seemingly meaningless string of characters to a prompt, which\ninfluences the LLM's output in a malicious way, bypassing safety measures.\nScenario #9: Multilingual/Obfuscated Attack\nAn attacker uses mu"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "d81e484445730bd3e20836850997d9fd3dbe543c6feaa2c8f38d636961657d8a",
+            "text": "OWASP Top 10 for LLM Applications v2.0 6genai.owasp.org a multimodal AI processes the image and text concurrently, the hidden prompt alters the model's behavior, potentially leading to unauthorized actions or disclosure of sensitive information. Scenario #8: Adversarial Suffix An attacker appends a seemingly meaningless string of characters to a prompt, which influences the LLM's output in a malicious way, bypassing safety measures. Scenario #9: Multilingual/Obfuscated Attack An attacker uses multiple languages or encodes malicious instructions (e.g., using Base64 or emojis) to evade filters and manipulate the LLM's behavior. Reference Links 1. ChatGPT Plugin Vulnerabilities - Chat with Code Embrace the Red 2. ChatGPT Cross Plugin Request Forgery and Prompt Injection Embrace the Red 3."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "d81e484445730bd3e20836850997d9fd3dbe543c6feaa2c8f38d636961657d8a",
+            "text": "OWASP Top 10 for LLM Applications v2.0 6genai.owasp.org a multimodal AI processes the image and text concurrently, the hidden prompt alters the model's behavior, potentially leading to unauthorized actions or disclosure of sensitive information. Scenario #8: Adversarial Suffix An attacker appends a seemingly meaningless string of characters to a prompt, which influences the LLM's output in a malicious way, bypassing safety measures. Scenario #9: Multilingual/Obfuscated Attack An attacker uses multiple languages or encodes malicious instructions (e.g., using Base64 or emojis) to evade filters and manipulate the LLM's behavior. Reference Links 1. ChatGPT Plugin Vulnerabilities - Chat with Code Embrace the Red 2. ChatGPT Cross Plugin Request Forgery and Prompt Injection Embrace the Red 3."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "reasons": {
+        "A": "Chunk b?t ??u gi?a m? t? m?t k?ch b?n multimodal; c? th? hi?u h?nh vi c?a hidden prompt nh?ng thi?u ph?n d?n nh?p c?a k?ch b?n.",
+        "B": "Chunk b?t ??u gi?a m? t? m?t k?ch b?n multimodal; c? th? hi?u h?nh vi c?a hidden prompt nh?ng thi?u ph?n d?n nh?p c?a k?ch b?n.",
+        "C": "Chunk b?t ??u gi?a m? t? m?t k?ch b?n multimodal; c? th? hi?u h?nh vi c?a hidden prompt nh?ng thi?u ph?n d?n nh?p c?a k?ch b?n."
+      }
+    },
+    {
+      "physical_page": 11,
+      "section": "LLM02:2025",
+      "source_position_anchor": "LLM02:2025 Sensitive Information Disclosure",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "fdedcbf2badb59549104aa7f92ee3423a3437c94187df913e18d22d93a5ea1b1",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n7genai.owasp.org\nLLM02:2025 Sensitive Information Disclosure\nDescription\nSensitive information can affect both the LLM and its application context. This includes personal\nidentifiable information (PII), financial details, health records, confidential business data, security\ncredentials, and legal documents. Proprietary models may also have unique training methods and\nsource code considered sensitive, especially in closed or foundation models.\nLLMs, especial"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "0c985c69a16eb336865a86bdf60c21284631dfe5ecd634af61b06b690ec00a47",
+            "text": "OWASP Top 10 for LLM Applications v2.0 7genai.owasp.org LLM02:2025 Sensitive Information Disclosure Description Sensitive information can affect both the LLM and its application context. This includes personal identifiable information (PII), financial details, health records, confidential business data, security credentials, and legal documents. Proprietary models may also have unique training methods and source code considered sensitive, especially in closed or foundation models. LLMs, especially when embedded in applications, risk exposing sensitive data, proprietary algorithms, or confidential details through their output. This can result in unauthorized data access, privacy violations, and intellectual property breaches. Consumers should be aware of how to interact safely with LLMs."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "0c985c69a16eb336865a86bdf60c21284631dfe5ecd634af61b06b690ec00a47",
+            "text": "OWASP Top 10 for LLM Applications v2.0 7genai.owasp.org LLM02:2025 Sensitive Information Disclosure Description Sensitive information can affect both the LLM and its application context. This includes personal identifiable information (PII), financial details, health records, confidential business data, security credentials, and legal documents. Proprietary models may also have unique training methods and source code considered sensitive, especially in closed or foundation models. LLMs, especially when embedded in applications, risk exposing sensitive data, proprietary algorithms, or confidential details through their output. This can result in unauthorized data access, privacy violations, and intellectual property breaches. Consumers should be aware of how to interact safely with LLMs."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "reasons": {
+        "A": "Chunk c? heading LLM02 v? ?o?n m? t? ??y ?? c?c lo?i d? li?u nh?y c?m; t? ch?a ?? ng? c?nh.",
+        "B": "Chunk c? heading LLM02 v? ?o?n m? t? ??y ?? c?c lo?i d? li?u nh?y c?m; t? ch?a ?? ng? c?nh.",
+        "C": "Chunk c? heading LLM02 v? ?o?n m? t? ??y ?? c?c lo?i d? li?u nh?y c?m; t? ch?a ?? ng? c?nh."
+      }
+    },
+    {
+      "physical_page": 12,
+      "section": "LLM02:2025",
+      "source_position_anchor": "Prevention and Mitigation Strategies",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "ba1c62a0fe99da87e33351a6b3786d75be4a6dde52d6cda3c900ee8800bddeba",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n8genai.owasp.org\nPrevention and Mitigation Strategies\nSanitization:\n1. Integrate Data Sanitization Techniques\nImplement data sanitization to prevent user data from entering the training model. This\nincludes scrubbing or masking sensitive content before it is used in training.\n2. Robust Input Validation\nApply strict input validation methods to detect and filter out potentially harmful or sensitive\ndata inputs, ensuring they do not compromise the model.\nAcces"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "02dd5397d8fbbe92a11e0fbc3f660ef2c61dea43ef24b712711503b30827242f",
+            "text": "OWASP Top 10 for LLM Applications v2.0 8genai.owasp.org Prevention and Mitigation Strategies Sanitization: 1. Integrate Data Sanitization Techniques Implement data sanitization to prevent user data from entering the training model. This includes scrubbing or masking sensitive content before it is used in training. 2. Robust Input Validation Apply strict input validation methods to detect and filter out potentially harmful or sensitive data inputs, ensuring they do not compromise the model. Access Controls: 1. Enforce Strict Access Controls Limit access to sensitive data based on the principle of least privilege. Only grant access to data that is necessary for the specific user or process. 2."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "02dd5397d8fbbe92a11e0fbc3f660ef2c61dea43ef24b712711503b30827242f",
+            "text": "OWASP Top 10 for LLM Applications v2.0 8genai.owasp.org Prevention and Mitigation Strategies Sanitization: 1. Integrate Data Sanitization Techniques Implement data sanitization to prevent user data from entering the training model. This includes scrubbing or masking sensitive content before it is used in training. 2. Robust Input Validation Apply strict input validation methods to detect and filter out potentially harmful or sensitive data inputs, ensuring they do not compromise the model. Access Controls: 1. Enforce Strict Access Controls Limit access to sensitive data based on the principle of least privilege. Only grant access to data that is necessary for the specific user or process. 2."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "reasons": {
+        "A": "? sanitization ???c gi? tr?n: l?m s?ch/che d? li?u nh?y c?m tr??c training. A c?t s?t sang m?c k? ti?p nh?ng kh?ng c?t m?t ? ???c l?y m?u.",
+        "B": "? sanitization ???c gi? tr?n: l?m s?ch/che d? li?u nh?y c?m tr??c training. A c?t s?t sang m?c k? ti?p nh?ng kh?ng c?t m?t ? ???c l?y m?u.",
+        "C": "? sanitization ???c gi? tr?n: l?m s?ch/che d? li?u nh?y c?m tr??c training. A c?t s?t sang m?c k? ti?p nh?ng kh?ng c?t m?t ? ???c l?y m?u."
+      }
+    },
+    {
+      "physical_page": 13,
+      "section": "LLM02:2025",
+      "source_position_anchor": "Limit the ability for users to override or access the system's initial settings, reducing the risk",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "5f3fbafaf22ba186ab232f300cacbfbf1741f72d3333e4cfc87077dcf63453d9",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n9genai.owasp.org\nLimit the ability for users to override or access the system's initial settings, reducing the risk\nof exposure to internal configurations.\n2. Reference Security Misconfiguration Best Practices\nFollow guidelines like \"OWASP API8:2023 Security Misconfiguration\" to prevent leaking\nsensitive information through error messages or configuration details.\n(Ref. link:OWASP API8:2023 Security Misconfiguration)\nAdvanced Techniques:\n1. Homomorphic Encr"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "23d7ef197c058c5a21a79809893f140833741690c405c7bc98666321aa84ea11",
+            "text": "OWASP Top 10 for LLM Applications v2.0 9genai.owasp.org Limit the ability for users to override or access the system's initial settings, reducing the risk of exposure to internal configurations. 2. Reference Security Misconfiguration Best Practices Follow guidelines like \"OWASP API8:2023 Security Misconfiguration\" to prevent leaking sensitive information through error messages or configuration details. (Ref. link:OWASP API8:2023 Security Misconfiguration) Advanced Techniques: 1. Homomorphic Encryption Use homomorphic encryption to enable secure data analysis and privacy-preserving machine learning. This ensures data remains confidential while being processed by the model. 2. Tokenization and Redaction Implement tokenization to preprocess and sanitize sensitive information."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "23d7ef197c058c5a21a79809893f140833741690c405c7bc98666321aa84ea11",
+            "text": "OWASP Top 10 for LLM Applications v2.0 9genai.owasp.org Limit the ability for users to override or access the system's initial settings, reducing the risk of exposure to internal configurations. 2. Reference Security Misconfiguration Best Practices Follow guidelines like \"OWASP API8:2023 Security Misconfiguration\" to prevent leaking sensitive information through error messages or configuration details. (Ref. link:OWASP API8:2023 Security Misconfiguration) Advanced Techniques: 1. Homomorphic Encryption Use homomorphic encryption to enable secure data analysis and privacy-preserving machine learning. This ensures data remains confidential while being processed by the model. 2. Tokenization and Redaction Implement tokenization to preprocess and sanitize sensitive information."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "reasons": {
+        "A": "C?u h??ng d?n b?t ??u b?ng h?nh ??ng r? r?ng, c? m?c ??ch v? c?u ti?p theo n?u c?ch ph?ng ng?a; hi?u ???c d? thi?u heading tr??c ??.",
+        "B": "C?u h??ng d?n b?t ??u b?ng h?nh ??ng r? r?ng, c? m?c ??ch v? c?u ti?p theo n?u c?ch ph?ng ng?a; hi?u ???c d? thi?u heading tr??c ??.",
+        "C": "C?u h??ng d?n b?t ??u b?ng h?nh ??ng r? r?ng, c? m?c ??ch v? c?u ti?p theo n?u c?ch ph?ng ng?a; hi?u ???c d? thi?u heading tr??c ??."
+      }
+    },
+    {
+      "physical_page": 15,
+      "section": "LLM03:2025",
+      "source_position_anchor": "LLM03:2025 Supply Chain",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "12ebeded965a4f354b4f377410d48bccc438c0dfedbd3cd2cfe83043e0f495fd",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n11genai.owasp.org\nLLM03:2025 Supply Chain\nDescription\nLLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of\ntraining data, models, and deployment platforms. These risks can result in biased outputs,\nsecurity breaches, or system failures. While traditional software vulnerabilities focus on issues\nlike code flaws and dependencies, in ML the risks also extend to third-party pre-trained models\nand data.\nThese external e"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "183726600bf186873e76ea84a87d992061bfe357b770ace42fd07657805766f4",
+            "text": "OWASP Top 10 for LLM Applications v2.0 11genai.owasp.org LLM03:2025 Supply Chain Description LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in biased outputs, security breaches, or system failures. While traditional software vulnerabilities focus on issues like code flaws and dependencies, in ML the risks also extend to third-party pre-trained models and data. These external elements can be manipulated through tampering or poisoning attacks. Creating LLMs is a specialized task that often depends on third-party models."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "183726600bf186873e76ea84a87d992061bfe357b770ace42fd07657805766f4",
+            "text": "OWASP Top 10 for LLM Applications v2.0 11genai.owasp.org LLM03:2025 Supply Chain Description LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in biased outputs, security breaches, or system failures. While traditional software vulnerabilities focus on issues like code flaws and dependencies, in ML the risks also extend to third-party pre-trained models and data. These external elements can be manipulated through tampering or poisoning attacks. Creating LLMs is a specialized task that often depends on third-party models."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "reasons": {
+        "A": "Chunk b?t ??u b?ng heading LLM03 v? gi? tr?n ph?n m? t? chu?i cung ?ng c?ng t?c ??ng; t? hi?u ???c.",
+        "B": "Chunk b?t ??u b?ng heading LLM03 v? gi? tr?n ph?n m? t? chu?i cung ?ng c?ng t?c ??ng; t? hi?u ???c.",
+        "C": "Chunk b?t ??u b?ng heading LLM03 v? gi? tr?n ph?n m? t? chu?i cung ?ng c?ng t?c ??ng; t? hi?u ???c."
+      }
+    },
+    {
+      "physical_page": 16,
+      "section": "LLM03:2025",
+      "source_position_anchor": "4. Vulnerable Pre-Trained Model",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "58d706f1a98a6d834b8b6f0fb5b1e1ba33f8006e7c28fe99a9419e57a589bbb7",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n12genai.owasp.org\n4. Vulnerable Pre-Trained Model\nModels are binary black boxes and unlike open source, static inspection can offer little to\nsecurity assurances. Vulnerable pre-trained models can contain hidden biases, backdoors, or\nother malicious features that have not been identified through the safety evaluations of\nmodel repository. Vulnerable models can be created by both poisoned datasets and direct\nmodel tampering using tehcniques such as ROME also"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "084321fd123080faa638913b742a7f9413f70a6cf9c58d0d069f6093778a7be6",
+            "text": "OWASP Top 10 for LLM Applications v2.0 12genai.owasp.org 4. Vulnerable Pre-Trained Model Models are binary black boxes and unlike open source, static inspection can offer little to security assurances. Vulnerable pre-trained models can contain hidden biases, backdoors, or other malicious features that have not been identified through the safety evaluations of model repository. Vulnerable models can be created by both poisoned datasets and direct model tampering using tehcniques such as ROME also known as lobotomisation. 5. Weak Model Provenance Currently there are no strong provenance assurances in published models. Model Cards and associated documentation provide model information and relied upon users, but they offer no guarantees on the origin of the model."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "084321fd123080faa638913b742a7f9413f70a6cf9c58d0d069f6093778a7be6",
+            "text": "OWASP Top 10 for LLM Applications v2.0 12genai.owasp.org 4. Vulnerable Pre-Trained Model Models are binary black boxes and unlike open source, static inspection can offer little to security assurances. Vulnerable pre-trained models can contain hidden biases, backdoors, or other malicious features that have not been identified through the safety evaluations of model repository. Vulnerable models can be created by both poisoned datasets and direct model tampering using tehcniques such as ROME also known as lobotomisation. 5. Weak Model Provenance Currently there are no strong provenance assurances in published models. Model Cards and associated documentation provide model information and relied upon users, but they offer no guarantees on the origin of the model."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "reasons": {
+        "A": "Chunk b?t ??u ? m?c Vulnerable Pre-Trained Model v? gi? tr?n gi?i th?ch v? bias/backdoor; t? hi?u ???c.",
+        "B": "Chunk b?t ??u ? m?c Vulnerable Pre-Trained Model v? gi? tr?n gi?i th?ch v? bias/backdoor; t? hi?u ???c.",
+        "C": "Chunk b?t ??u ? m?c Vulnerable Pre-Trained Model v? gi? tr?n gi?i th?ch v? bias/backdoor; t? hi?u ???c."
+      }
+    },
+    {
+      "physical_page": 17,
+      "section": "LLM03:2025",
+      "source_position_anchor": "and Outdated Components.\" This includes vulnerability scanning, management, and patching",
+      "candidate_chunks_by_strategy": {
+        "A": [
+          {
+            "chunk_id": "d8c99109fd27fafc56a87bf88d1fcd558b6ca37acc2a20710d1a1f6cbd56ae63",
+            "text": "OWASP Top 10 for LLM Applications v2.0\n13genai.owasp.org\nand Outdated Components.\" This includes vulnerability scanning, management, and patching\ncomponents. For development environments with access to sensitive data, apply these\ncontrols in those environments, too.\n(Ref. link: A06:2021 – Vulnerable and Outdated Components)\n3. Apply comprehensive AI Red Teaming and Evaluations when selecting a third party model.\nDecoding Trust is an example of a Trustworthy AI benchmark for LLMs but models can\nf"
+          }
+        ],
+        "B": [
+          {
+            "chunk_id": "05f918a16cb432238ed128a23e7edc19cb44c130b3638db6ff31133f2a2dcf14",
+            "text": "OWASP Top 10 for LLM Applications v2.0 13genai.owasp.org and Outdated Components.\" This includes vulnerability scanning, management, and patching components. For development environments with access to sensitive data, apply these controls in those environments, too. (Ref. link: A06:2021 – Vulnerable and Outdated Components) 3. Apply comprehensive AI Red Teaming and Evaluations when selecting a third party model. Decoding Trust is an example of a Trustworthy AI benchmark for LLMs but models can finetuned to by pass published benchmarks. Use extensive AI Red Teaming to evaluate the model, especially in the use cases you are planning to use the model for. 4."
+          }
+        ],
+        "C": [
+          {
+            "chunk_id": "05f918a16cb432238ed128a23e7edc19cb44c130b3638db6ff31133f2a2dcf14",
+            "text": "OWASP Top 10 for LLM Applications v2.0 13genai.owasp.org and Outdated Components.\" This includes vulnerability scanning, management, and patching components. For development environments with access to sensitive data, apply these controls in those environments, too. (Ref. link: A06:2021 – Vulnerable and Outdated Components) 3. Apply comprehensive AI Red Teaming and Evaluations when selecting a third party model. Decoding Trust is an example of a Trustworthy AI benchmark for LLMs but models can finetuned to by pass published benchmarks. Use extensive AI Red Teaming to evaluate the model, especially in the use cases you are planning to use the model for. 4."
+          }
+        ]
+      },
+      "scores_0_to_2": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "reasons": {
+        "A": "Chunk b?t ??u ? cu?i c?m ?Vulnerable and Outdated Components?, l?m m?t ph?n ??u c?a m?c; c?u sau c?n n?i ?This includes? n?n ch? hi?u m?t ph?n.",
+        "B": "Chunk b?t ??u ? cu?i c?m ?Vulnerable and Outdated Components?, l?m m?t ph?n ??u c?a m?c; c?u sau c?n n?i ?This includes? n?n ch? hi?u m?t ph?n.",
+        "C": "Chunk b?t ??u ? cu?i c?m ?Vulnerable and Outdated Components?, l?m m?t ph?n ??u c?a m?c; c?u sau c?n n?i ?This includes? n?n ch? hi?u m?t ph?n."
+      }
+    }
+  ],
+  "review_note": {
+    "reviewer": "Copilot AI assistant",
+    "method": "Inspected the sampled chunk text at each preselected source position using the supplied 0?2 rubric.",
+    "limitation": "Single AI-assisted reviewer; not an independent human annotation. A human spot-check is recommended for borderline boundary cases."
+  },
+  "summary": {
+    "A": {
+      "sample_count": 10,
+      "score_counts": {
+        "0": 0,
+        "1": 3,
+        "2": 7
+      },
+      "mean_score_0_to_2": 1.7
+    },
+    "B": {
+      "sample_count": 10,
+      "score_counts": {
+        "0": 0,
+        "1": 3,
+        "2": 7
+      },
+      "mean_score_0_to_2": 1.7
+    },
+    "C": {
+      "sample_count": 10,
+      "score_counts": {
+        "0": 0,
+        "1": 3,
+        "2": 7
+      },
+      "mean_score_0_to_2": 1.7
+    }
+  }
+}

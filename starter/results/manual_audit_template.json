@@ -1,0 +1,1380 @@
+{
+  "instructions": "Manual review completed against the gold questions, retrieved passages and source metadata. Scores assess evidence retrieval, not LLM answer accuracy.",
+  "grounding_scale": {
+    "0": "No supporting evidence",
+    "1": "Some evidence, but missing needed condition or context",
+    "2": "Sufficient evidence to answer and trace to the source"
+  },
+  "items": [
+    {
+      "strategy": "A",
+      "question_id": "q16",
+      "question": "Có nên xem system prompt là bí mật hoặc dùng nó làm biện pháp kiểm soát bảo mật không? Nêu một loại dữ liệu nhạy cảm không nên đặt trong đó.",
+      "retrieval_seconds": 0.0012057999992975965,
+      "expected_answer": "Không. System prompt không nên được xem là bí mật hoặc security control; không đặt dữ liệu nhạy cảm như credentials, connection strings hoặc thông tin xác thực trong đó.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 30,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "e84b5cc7384b93da3c74df82a3b300c3ae8f32f20e0bbe2c7f7c3f21d441efdf",
+          "text": "y contain secrets. When\ndiscovered, this information can be used to facilitate other attacks.\nIt's important to understand that the system prompt should not be considered a secret, nor should\nit be used as a security control. Accordingly, sensitive data such as credentials, connection\nstrings, etc. should not be contained within the system prompt language.\nSimilarly, if a system prompt contains information describing different roles and permissions, or\nsensitive data like connection strings or p",
+          "metadata": {
+            "char_end": 950,
+            "chunk_strategy": "fixed",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "document_id": "owasp-llm-top-10-2025",
+            "section": "LLM07:2025",
+            "page": 30,
+            "chunk_index": 1,
+            "char_start": 450
+          },
+          "score": 0.8155663013458252,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "4a69756c62ab733baf0ac52f9837aedefa191c32e61d15a712531dc096f8d5e7",
+          "text": "ns, or\nsensitive data like connection strings or passwords, while the disclosure of such information may\nbe helpful, the fundamental security risk is not that these have been disclosed, it is that the\napplication allows bypassing strong session management and authorization checks by delegating\nthese to the LLM, and that sensitive data is being stored in a place that it should not be.\nIn short: disclosure of the system prompt itself does not present the real risk -- the security risk\nlies with th",
+          "metadata": {
+            "section": "LLM07:2025",
+            "chunk_strategy": "fixed",
+            "chunk_index": 2,
+            "page": 30,
+            "document_id": "owasp-llm-top-10-2025",
+            "char_end": 1400,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_start": 900
+          },
+          "score": 0.655103325843811,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "ca4bfde6ea9687a6d9f49c7bca6a12762edf626a21c6c0da547613919c8c60eb",
+          "text": "based permissions, they could look for a privilege\nescalation attack.\nPrevention and Mitigation Strategies\n1. Separate Sensitive Data from System Prompts\nAvoid embedding any sensitive information (e.g. API keys, auth keys, database names, user\nroles, permission structure of the application) directly in the system prompts. Instead,\nexternalize such information to the systems that the model does not directly access.\n2. Avoid Reliance on System Prompts for Strict Behavior Control\nSince LLMs are sus",
+          "metadata": {
+            "char_start": 1350,
+            "section": "LLM07:2025",
+            "page": 31,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_end": 1850,
+            "chunk_strategy": "fixed",
+            "chunk_index": 3,
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.6135594248771667,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Top-3 tr?n trang 30?31 n?u tr?c ti?p kh?ng xem system prompt l? b? m?t/security control v? kh?ng ??t credentials ho?c connection strings trong ??; ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q17",
+      "question": "Chỉ xét section LLM08:2025: trong vector database dùng chung cho nhiều tenant, rủi ro nào có thể khiến dữ liệu lọt giữa các nhóm?",
+      "retrieval_seconds": 0.0011783999943872914,
+      "expected_answer": "Context có thể bị rò rỉ giữa người dùng hoặc query trong môi trường multi-tenant dùng chung vector database.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 33,
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM08:2025"
+      },
+      "top_3": [
+        {
+          "chunk_id": "a86f3aead02186278b5d64ea75cdbe5be49eb317efeec1457a70732e6c1c6246",
+          "text": "OWASP Top 10 for LLM Applications v2.0\n31genai.owasp.org\nIn a multi-tenant environment where different groups or classes of users share the same\nvector database, embeddings from one group might be inadvertently retrieved in response to\nqueries from another group’s LLM, potentially leaking sensitive business information.\nMitigation\nA permission-aware vector database should be implemented to restrict access and ensure\nthat only authorized groups can access their specific information.\nScenario #3:",
+          "metadata": {
+            "chunk_index": 0,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_strategy": "fixed",
+            "page": 35,
+            "char_start": 0,
+            "char_end": 500,
+            "section": "LLM08:2025"
+          },
+          "score": 0.6738991737365723,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "a9e3d8bed588aae1ba9f42aa4a6229c3bfbd76314d0dee25aae16a69c5d8de33",
+          "text": "#2: Access control & data leakage risk by combining data with different\naccess restrictions",
+          "metadata": {
+            "char_end": 2341,
+            "section": "LLM08:2025",
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_index": 5,
+            "chunk_strategy": "fixed",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_start": 2250,
+            "page": 34
+          },
+          "score": 0.6123278141021729,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "c95ba723ae1530d133b4d1a38a8f14a3b08efc2bbb6dc9c2575d997f9edb212b",
+          "text": "ity to make accurate predictions. The risks are particularly high with\nexternal data sources, which may contain unverified or malicious content.\nMoreover, models distributed through shared repositories or open-source platforms can carry\nrisks beyond data poisoning, such as malware embedded through techniques like malicious\npickling, which can execute harmful code when the model is loaded. Also, consider that poisoning\nmay allow for the implementation of a backdoor. Such backdoors may leave the m",
+          "metadata": {
+            "char_end": 1400,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM04:2025",
+            "chunk_index": 2,
+            "chunk_strategy": "fixed",
+            "document_id": "owasp-llm-top-10-2025",
+            "page": 20,
+            "char_start": 900
+          },
+          "score": 0.5640276670455933,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk ??u trang 35 m? t? embedding c?a nh?m n?y c? th? b? truy xu?t b?i LLM c?a nh?m kh?c, l?m l? th?ng tin kinh doanh; ??y l? b?ng ch?ng t??ng ???ng ?? ?? tr? l?i d? kh?ng ph?i gold page 33.",
+      "filter_compliant": false,
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "A kh?ng ?p d?ng query filter theo thi?t k?; ch? 2/3 hit t?nh c? thu?c section=LLM08:2025."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q18",
+      "question": "Theo LLM09:2025, hallucination thường phát sinh như thế nào và vì sao có thể tạo thông tin sai lệch?",
+      "retrieval_seconds": 0.0012317000000621192,
+      "expected_answer": "Khi thiếu dữ liệu trong training, LLM dùng các mẫu thống kê để lấp khoảng trống mà không thực sự hiểu nội dung; câu trả lời có thể nghe có vẻ đúng nhưng hoàn toàn không có căn cứ.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 36,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "c804f6107d5bbdac7034e39c53338d658e82b514abd62e5aa43706e5e0fc37ed",
+          "text": "nerates content that\nseems accurate but is fabricated. Hallucinations occur when LLMs fill gaps in their training data\nusing statistical patterns, without truly understanding the content. As a result, the model may\nproduce answers that sound correct but are completely unfounded. While hallucinations are a\nmajor source of misinformation, they are not the only cause; biases introduced by the training\ndata and incomplete information can also contribute.\nA related issue is overreliance. Overreliance",
+          "metadata": {
+            "char_start": 450,
+            "chunk_index": 1,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_strategy": "fixed",
+            "page": 36,
+            "char_end": 950,
+            "document_id": "owasp-llm-top-10-2025",
+            "section": "LLM09:2025"
+          },
+          "score": 0.7932785749435425,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "660af782d4066312f6d14f1b65602a930c73f5fec89f335a15ddcba09bff3585",
+          "text": "lps mitigate the risk of hallucinations and misinformation.\n2. Model Fine-Tuning\nEnhance the model with fine-tuning or embeddings to improve output quality. Techniques\nsuch as parameter-efficient tuning (PET) and chain-of-thought prompting can help reduce\nthe incidence of misinformation.\n3. Cross-Verification and Human Oversight\nEncourage users to cross-check LLM outputs with trusted external sources to ensure the\naccuracy of the information. Implement human oversight and fact-checking processes",
+          "metadata": {
+            "section": "LLM09:2025",
+            "page": 37,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_end": 1400,
+            "chunk_strategy": "fixed",
+            "char_start": 900,
+            "chunk_index": 2,
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.5973730683326721,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "fab8a6bb837ea5f9169d2c53322bc9b94b0be97f47cef2e7ac6c09ed69aa32b6",
+          "text": "nto AI Package Hallucinations: Lasso Security\n8. How Secure is Code Generated by ChatGPT?: Arvix\n9. How to Reduce the Hallucinations from Large Language Models: The New Stack\n10. Practical Steps to Reduce Hallucination: Victor Debia\n11. A Framework for Exploring the Consequences of AI-Mediated Enterprise Knowledge:\nMicrosoft\nRelated Frameworks and Taxonomies\nRefer to this section for comprehensive information, scenarios strategies relating to\ninfrastructure deployment, applied environment contro",
+          "metadata": {
+            "document_id": "owasp-llm-top-10-2025",
+            "page": 38,
+            "char_end": 2300,
+            "section": "LLM09:2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_start": 1800,
+            "chunk_index": 4,
+            "chunk_strategy": "fixed"
+          },
+          "score": 0.5713512897491455,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk ??u trang 36 ghi ??y ?? c? ch? hallucination (l?p kho?ng tr?ng b?ng m?u th?ng k?, kh?ng hi?u n?i dung) v? h? qu? c?u tr? l?i nghe ??ng nh?ng v? c?n c?.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q19",
+      "question": "RAG được khuyến nghị nhằm giảm misinformation bằng cách nào?",
+      "retrieval_seconds": 0.0012126000001444481,
+      "expected_answer": "Truy xuất thông tin liên quan đã được xác minh từ cơ sở dữ liệu bên ngoài đáng tin cậy trong lúc tạo câu trả lời, giúp giảm hallucination và misinformation.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 37,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "660af782d4066312f6d14f1b65602a930c73f5fec89f335a15ddcba09bff3585",
+          "text": "lps mitigate the risk of hallucinations and misinformation.\n2. Model Fine-Tuning\nEnhance the model with fine-tuning or embeddings to improve output quality. Techniques\nsuch as parameter-efficient tuning (PET) and chain-of-thought prompting can help reduce\nthe incidence of misinformation.\n3. Cross-Verification and Human Oversight\nEncourage users to cross-check LLM outputs with trusted external sources to ensure the\naccuracy of the information. Implement human oversight and fact-checking processes",
+          "metadata": {
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_start": 900,
+            "page": 37,
+            "char_end": 1400,
+            "section": "LLM09:2025",
+            "chunk_strategy": "fixed",
+            "chunk_index": 2,
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.6946595907211304,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "c12691040ba3f4fd90d4bb14f24a75222a90c83652866e8cfd5107aaa7bfe6e8",
+          "text": "OWASP Top 10 for LLM Applications v2.0\n32genai.owasp.org\nLLM09:2025 Misinformation\nDescription\nMisinformation from LLMs poses a core vulnerability for applications relying on these models.\nMisinformation occurs when LLMs produce false or misleading information that appears credible.\nThis vulnerability can lead to security breaches, reputational damage, and legal liability.\nOne of the major causes of misinformation is hallucination—when the LLM generates content that\nseems accurate but is fabrica",
+          "metadata": {
+            "char_end": 500,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM09:2025",
+            "chunk_strategy": "fixed",
+            "page": 36,
+            "char_start": 0,
+            "chunk_index": 0,
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.594588041305542,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "623129a7d4134ac4c661603a77d90e71f7a52920f43c879473cfb06e889c8859",
+          "text": "lement human oversight and fact-checking processes,\nespecially for critical or sensitive information. Ensure that human reviewers are properly\ntrained to avoid overreliance on AI-generated content.\n4. Automatic Validation Mechanisms\nImplement tools and processes to automatically validate key outputs, especially output from\nhigh-stakes environments.\n5. Risk Communication\nIdentify the risks and possible harms associated with LLM-generated content, then clearly\ncommunicate these risks and limitatio",
+          "metadata": {
+            "page": 37,
+            "chunk_strategy": "fixed",
+            "chunk_index": 3,
+            "char_end": 1850,
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM09:2025",
+            "char_start": 1350
+          },
+          "score": 0.5944989919662476,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 1,
+      "grounding_reason": "C?c chunk li?n quan ch? tr? v? ph?n cu?i ?helps mitigate...? v? n?i dung chung v? misinformation; kh?ng n?u c?ch RAG truy xu?t th?ng tin ?? x?c minh t? ngu?n ngo?i ??ng tin c?y, n?n ch? h? tr? m?t ph?n.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q20",
+      "question": "Chỉ xét section LLM10:2025: cách nào hạn chế số yêu cầu đến từ một nguồn trong một khoảng thời gian?",
+      "retrieval_seconds": 0.0010111000010510907,
+      "expected_answer": "Áp dụng rate limiting và user quotas để giới hạn số request mà một nguồn có thể gửi trong một khoảng thời gian nhất định.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 40,
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM10:2025"
+      },
+      "top_3": [
+        {
+          "chunk_id": "c7f8f31a4a11e6f5ca79cf00f27dd40efc11dd2373a8b9336d31214d6d119025",
+          "text": "OWASP Top 10 for LLM Applications v2.0\n38genai.owasp.org\nlimitations.\nScenario #6: Bypassing System Input Filtering\nA malicious attacker bypasses input filtering techniques and preambles of the LLM to\nperform a side-channel attack and retrieve model information to a remote controlled\nresource under their control.\nReference Links\n1. Proof Pudding (CVE-2019-20634) AVID (`moohax` & `monoxgas`)\n2. arXiv:2403.06634 Stealing Part of a Production Language Model arXiv\n3. Runaway LLaMA | How Meta's LLaMA",
+          "metadata": {
+            "page": 42,
+            "chunk_strategy": "fixed",
+            "char_end": 500,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM10:2025",
+            "char_start": 0,
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_index": 0
+          },
+          "score": 0.5073256492614746,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "4e81dd4d0b1a304ea329e993d82bde013c1184ad5f0862006a3f8b0698bea7a3",
+          "text": "OWASP Top 10 for LLM Applications v2.0\n28genai.owasp.org\nnot be delegated to the LLM, either through the system prompt or otherwise. These controls\nneed to occur in a deterministic, auditable manner, and LLMs are not (currently) conducive to\nthis. In cases where an agent is performing tasks, if those tasks require different levels of\naccess, then multiple agents should be used, each configured with the least privileges\nneeded to perform the desired tasks.\nExample Attack Scenarios\nScenario #1\nAn",
+          "metadata": {
+            "char_end": 500,
+            "chunk_strategy": "fixed",
+            "document_id": "owasp-llm-top-10-2025",
+            "char_start": 0,
+            "section": "LLM07:2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_index": 0,
+            "page": 32
+          },
+          "score": 0.4974935054779053,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "acd2a480e441d8f26fe83a56fb7417058412627123e53ce999e4be177f9a972e",
+          "text": "ement strict input validation to ensure that inputs do not exceed reasonable size limits.\n2. Limit Exposure of Logits and Logprobs\nRestrict or obfuscate the exposure of `logit_bias` and `logprobs` in API responses. Provide\nonly the necessary information without revealing detailed probabilities.\n3. Rate Limiting\nApply rate limiting and user quotas to restrict the number of requests a single source entity\ncan make in a given time period.\n4. Resource Allocation Management\nMonitor and manage resourc",
+          "metadata": {
+            "char_start": 900,
+            "document_id": "owasp-llm-top-10-2025",
+            "section": "LLM10:2025",
+            "page": 40,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_end": 1400,
+            "chunk_index": 2,
+            "chunk_strategy": "fixed"
+          },
+          "score": 0.4907262325286865,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk th? ba trang 40 n?u tr?c ti?p rate limiting v? user quotas ?? gi?i h?n s? request t? m?t ngu?n trong m?t kho?ng th?i gian; ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": false,
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "A kh?ng ?p d?ng query filter theo thi?t k?; ch? 2/3 hit t?nh c? thu?c section=LLM10:2025."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q16",
+      "question": "Có nên xem system prompt là bí mật hoặc dùng nó làm biện pháp kiểm soát bảo mật không? Nêu một loại dữ liệu nhạy cảm không nên đặt trong đó.",
+      "retrieval_seconds": 0.0008935999940149486,
+      "expected_answer": "Không. System prompt không nên được xem là bí mật hoặc security control; không đặt dữ liệu nhạy cảm như credentials, connection strings hoặc thông tin xác thực trong đó.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 30,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "0196f92df3f4fce962083b9359d8a135641664ff86a1454d1fe7804a52a042fd",
+          "text": "should not be contained within the system prompt language. Similarly, if a system prompt contains information describing different roles and permissions, or sensitive data like connection strings or passwords, while the disclosure of such information may be helpful, the fundamental security risk is not that these have been disclosed, it is that the application allows bypassing strong session management and authorization checks by delegating these to the LLM, and that sensitive data is being stored in a place that it should not be. In short: disclosure of the system prompt itself does not present the real risk -- the security risk lies with the underlying elements, whether that be sensitive information disclosure, system guardrails bypass, improper separation of privileges, etc.",
+          "metadata": {
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_strategy": "paragraph",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 788,
+            "page": 30,
+            "section": "LLM07:2025",
+            "chunk_index": 1
+          },
+          "score": 0.7584444284439087,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "8ce65e5cb347832eab66c87a8b8812487735465747297c68d35a939826ade32b",
+          "text": "Revealing of Filtering Criteria A system prompt might ask the model to filter or reject sensitive content. For example, a model might have a system prompt like, “If a user requests information about another user, always respond with ‘Sorry, I cannot assist with that request’”. 4. Disclosure of Permissions and User Roles The system prompt could reveal the internal role structures or permission levels of the application. For instance, a system prompt might reveal, “Admin user role grants full access to modify user records.” If the attackers learn about these role-based permissions, they could look for a privilege escalation attack. Prevention and Mitigation Strategies 1. Separate Sensitive Data from System Prompts Avoid embedding any sensitive information (e.g.",
+          "metadata": {
+            "chunk_index": 1,
+            "page": 31,
+            "char_count": 769,
+            "section": "LLM07:2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_strategy": "paragraph"
+          },
+          "score": 0.7001274824142456,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "2789a988ba5feb723ade7886459583ad663acfa8d46baddf555e1323d8e92df0",
+          "text": "OWASP Top 10 for LLM Applications v2.0 26genai.owasp.org LLM07:2025 System Prompt Leakage Description The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain sensitive information that was not intended to be discovered. System prompts are designed to guide the model's output based on the requirements of the application, but may inadvertently contain secrets. When discovered, this information can be used to facilitate other attacks. It's important to understand that the system prompt should not be considered a secret, nor should it be used as a security control. Accordingly, sensitive data such as credentials, connection strings, etc.",
+          "metadata": {
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_index": 0,
+            "char_count": 749,
+            "chunk_strategy": "paragraph",
+            "section": "LLM07:2025",
+            "page": 30
+          },
+          "score": 0.6593042612075806,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Top-3 tr?n trang 30?31 ch?a khuy?n ngh? kh?ng xem system prompt l? b? m?t v? kh?ng ch?a connection strings/passwords; ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q17",
+      "question": "Chỉ xét section LLM08:2025: trong vector database dùng chung cho nhiều tenant, rủi ro nào có thể khiến dữ liệu lọt giữa các nhóm?",
+      "retrieval_seconds": 0.0009867999979178421,
+      "expected_answer": "Context có thể bị rò rỉ giữa người dùng hoặc query trong môi trường multi-tenant dùng chung vector database.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 33,
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM08:2025"
+      },
+      "top_3": [
+        {
+          "chunk_id": "a4dc7b551732d866dad2b3e40a37d9c9532ea08582fc11d04f400447949aa919",
+          "text": "Cross-Context Information Leaks and Federation Knowledge Conflict In multi-tenant environments where multiple classes of users or applications share the same vector database, there's a risk of context leakage between users or queries. Data federation knowledge conflict errors can occur when data from multiple sources contradict each other (Ref #2). This can also happen when an LLM can’t supersede old knowledge that it has learned while training, with the new data from Retrieval Augmentation. 3. Embedding Inversion Attacks Attackers can exploit vulnerabilities to invert embeddings and recover significant amounts of source information, compromising data confidentiality.(Ref #3, #4) 4.",
+          "metadata": {
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_strategy": "paragraph",
+            "page": 33,
+            "chunk_index": 2,
+            "char_count": 691,
+            "section": "LLM08:2025"
+          },
+          "score": 0.5699154138565063,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "81b36e4e516279a2d413cc2f907db53419c4f4c981a71c3b071c45b8df93c19b",
+          "text": "OWASP Top 10 for LLM Applications v2.0 30genai.owasp.org providers, leading to manipulated model outputs. 5. Behavior Alteration Retrieval Augmentation can inadvertently alter the foundational model's behavior. For example, while factual accuracy and relevance may increase, aspects like emotional intelligence or empathy can diminish, potentially reducing the model's effectiveness in certain applications. (Scenario #3) Prevention and Mitigation Strategies 1. Permission and access control Implement fine-grained access controls and permission-aware vector and embedding stores. Ensure strict logical and access partitioning of datasets in the vector database to prevent unauthorized access between different classes of users or different groups. 2.",
+          "metadata": {
+            "chunk_index": 0,
+            "char_count": 751,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "document_id": "owasp-llm-top-10-2025",
+            "page": 34,
+            "section": "LLM08:2025",
+            "chunk_strategy": "paragraph"
+          },
+          "score": 0.5323705673217773,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "fba1bc320856e7f1706477c880e82e1f2198ccb61c2b8e5ef91f36c6eb4b19ee",
+          "text": "The rise of open- access LLMs and new fine-tuning methods like \"LoRA\" (Low-Rank Adaptation) and \"PEFT\" (Parameter-Efficient Fine-Tuning), especially on platforms like Hugging Face, introduce new supply-chain risks. Finally, the emergence of on-device LLMs increase the attack surface and supply-chain risks for LLM applications. Some of the risks discussed here are also discussed in \"LLM04 Data and Model Poisoning.\" This entry focuses on the supply-chain aspect of the risks. A simple threat model can be found here. Common Examples of Risks 1. Traditional Third-party Package Vulnerabilities Such as outdated or deprecated components, which attackers can exploit to compromise LLM applications.",
+          "metadata": {
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 697,
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_index": 1,
+            "section": "LLM03:2025",
+            "page": 15,
+            "chunk_strategy": "paragraph"
+          },
+          "score": 0.5068758130073547,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk ??u trang 33 n?u r? nguy c? context leakage gi?a users/queries khi d?ng chung vector database; ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": false,
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "B kh?ng ?p d?ng query filter theo thi?t k?; ch? 2/3 hit t?nh c? thu?c section=LLM08:2025."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q18",
+      "question": "Theo LLM09:2025, hallucination thường phát sinh như thế nào và vì sao có thể tạo thông tin sai lệch?",
+      "retrieval_seconds": 0.00079340000229422,
+      "expected_answer": "Khi thiếu dữ liệu trong training, LLM dùng các mẫu thống kê để lấp khoảng trống mà không thực sự hiểu nội dung; câu trả lời có thể nghe có vẻ đúng nhưng hoàn toàn không có căn cứ.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 36,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "06125a98ad5dc3458379ef4c9ca7e617f1b4c20e2e6a78a956fbee663138ecbb",
+          "text": "While hallucinations are a major source of misinformation, they are not the only cause; biases introduced by the training data and incomplete information can also contribute. A related issue is overreliance. Overreliance occurs when users place excessive trust in LLM- generated content, failing to verify its accuracy. This overreliance exacerbates the impact of misinformation, as users may integrate incorrect data into critical decisions or processes without adequate scrutiny. Common Examples of Risk 1. Factual Inaccuracies The model produces incorrect statements, leading users to make decisions based on false information. For example, Air Canada's chatbot provided misinformation to travelers, leading to operational disruptions and legal complications.",
+          "metadata": {
+            "page": 36,
+            "section": "LLM09:2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "document_id": "owasp-llm-top-10-2025",
+            "char_count": 762,
+            "chunk_strategy": "paragraph",
+            "chunk_index": 1
+          },
+          "score": 0.5415953397750854,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "7f4ddabe8407fee9c256b3b6e85debff3c3471b1247b18fd7bb05e8969b566af",
+          "text": "OWASP Top 10 for LLM Applications v2.0 32genai.owasp.org LLM09:2025 Misinformation Description Misinformation from LLMs poses a core vulnerability for applications relying on these models. Misinformation occurs when LLMs produce false or misleading information that appears credible. This vulnerability can lead to security breaches, reputational damage, and legal liability. One of the major causes of misinformation is hallucination—when the LLM generates content that seems accurate but is fabricated. Hallucinations occur when LLMs fill gaps in their training data using statistical patterns, without truly understanding the content. As a result, the model may produce answers that sound correct but are completely unfounded.",
+          "metadata": {
+            "chunk_index": 0,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 729,
+            "page": 36,
+            "section": "LLM09:2025",
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_strategy": "paragraph"
+          },
+          "score": 0.5146857500076294,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "e2e2c1c67eab3981e04be8a3b93de696af5e61f642aa124696ae606f3646406e",
+          "text": "During inference, integrate Retrieval-Augmented Generation (RAG) and grounding techniques to reduce risks of hallucinations. Example Attack Scenarios Scenario #1 An attacker biases the model's outputs by manipulating training data or using prompt injection techniques, spreading misinformation. Scenario #2 Toxic data without proper filtering can lead to harmful or biased outputs, propagating dangerous information. Scenario # 3 A malicious actor or competitor creates falsified documents for training, resulting in model outputs that reflect these inaccuracies. Scenario #4 Inadequate filtering allows an attacker to insert misleading data via prompt injection, leading to compromised outputs.",
+          "metadata": {
+            "chunk_index": 2,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_strategy": "paragraph",
+            "document_id": "owasp-llm-top-10-2025",
+            "page": 21,
+            "char_count": 695,
+            "section": "LLM04:2025"
+          },
+          "score": 0.5029455423355103,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk th? hai trang 36 ghi ??y ?? c? ch? hallucination v? h? qu? c?u tr? l?i nghe ??ng nh?ng v? c?n c?; ?? ?i?u ki?n ?? tr? l?i.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q19",
+      "question": "RAG được khuyến nghị nhằm giảm misinformation bằng cách nào?",
+      "retrieval_seconds": 0.0009580000041751191,
+      "expected_answer": "Truy xuất thông tin liên quan đã được xác minh từ cơ sở dữ liệu bên ngoài đáng tin cậy trong lúc tạo câu trả lời, giúp giảm hallucination và misinformation.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 37,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "e2e2c1c67eab3981e04be8a3b93de696af5e61f642aa124696ae606f3646406e",
+          "text": "During inference, integrate Retrieval-Augmented Generation (RAG) and grounding techniques to reduce risks of hallucinations. Example Attack Scenarios Scenario #1 An attacker biases the model's outputs by manipulating training data or using prompt injection techniques, spreading misinformation. Scenario #2 Toxic data without proper filtering can lead to harmful or biased outputs, propagating dangerous information. Scenario # 3 A malicious actor or competitor creates falsified documents for training, resulting in model outputs that reflect these inaccuracies. Scenario #4 Inadequate filtering allows an attacker to insert misleading data via prompt injection, leading to compromised outputs.",
+          "metadata": {
+            "chunk_index": 2,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 695,
+            "section": "LLM04:2025",
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_strategy": "paragraph",
+            "page": 21
+          },
+          "score": 0.5932043790817261,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "d7bc207740019b2062332f81bfd77c6070be200c9a3d02f4cf36a70f929a360f",
+          "text": "Retrieval-Augmented Generation (RAG) Use Retrieval-Augmented Generation to enhance the reliability of model outputs by retrieving relevant and verified information from trusted external databases during response generation. This helps mitigate the risk of hallucinations and misinformation. 2. Model Fine-Tuning Enhance the model with fine-tuning or embeddings to improve output quality. Techniques such as parameter-efficient tuning (PET) and chain-of-thought prompting can help reduce the incidence of misinformation. 3. Cross-Verification and Human Oversight Encourage users to cross-check LLM outputs with trusted external sources to ensure the accuracy of the information. Implement human oversight and fact-checking processes, especially for critical or sensitive information.",
+          "metadata": {
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 782,
+            "chunk_index": 1,
+            "chunk_strategy": "paragraph",
+            "document_id": "owasp-llm-top-10-2025",
+            "section": "LLM09:2025",
+            "page": 37
+          },
+          "score": 0.5893809199333191,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "b65eba06a2a39cd8c86f9f963b146335bb3a1e394a580997a459bbe6750f6667",
+          "text": "Ensure that human reviewers are properly trained to avoid overreliance on AI-generated content. 4. Automatic Validation Mechanisms Implement tools and processes to automatically validate key outputs, especially output from high-stakes environments. 5. Risk Communication Identify the risks and possible harms associated with LLM-generated content, then clearly communicate these risks and limitations to users, including the potential for misinformation. 6. Secure Coding Practices Establish secure coding practices to prevent the integration of vulnerabilities due to incorrect code suggestions. 7.",
+          "metadata": {
+            "section": "LLM09:2025",
+            "page": 37,
+            "chunk_index": 2,
+            "char_count": 599,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_strategy": "paragraph",
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.5846271514892578,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk th? hai trang 37 m? t? ??y ?? RAG truy xu?t th?ng tin li?n quan ?? x?c minh t? c? s? d? li?u ngo?i ??ng tin c?y khi t?o c?u tr? l?i v? gi?m hallucination/misinformation.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q20",
+      "question": "Chỉ xét section LLM10:2025: cách nào hạn chế số yêu cầu đến từ một nguồn trong một khoảng thời gian?",
+      "retrieval_seconds": 0.0010724999956437387,
+      "expected_answer": "Áp dụng rate limiting và user quotas để giới hạn số request mà một nguồn có thể gửi trong một khoảng thời gian nhất định.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 40,
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM10:2025"
+      },
+      "top_3": [
+        {
+          "chunk_id": "580ff1362a75542aa4e95edb65c52d35e7843c0dbaa0ff40f0e7b0508961e491",
+          "text": "This could compromise the model's security and lead to further exploitation. Prevention and Mitigation Strategies 1. Input Validation Implement strict input validation to ensure that inputs do not exceed reasonable size limits. 2. Limit Exposure of Logits and Logprobs Restrict or obfuscate the exposure of `logit_bias` and `logprobs` in API responses. Provide only the necessary information without revealing detailed probabilities. 3. Rate Limiting Apply rate limiting and user quotas to restrict the number of requests a single source entity can make in a given time period. 4. Resource Allocation Management Monitor and manage resource allocation dynamically to prevent any single user or request from consuming excessive resources. 5.",
+          "metadata": {
+            "document_id": "owasp-llm-top-10-2025",
+            "char_count": 739,
+            "chunk_index": 1,
+            "page": 40,
+            "section": "LLM10:2025",
+            "chunk_strategy": "paragraph",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
+          },
+          "score": 0.5589818358421326,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "ed3542fd06eec510356e5e62341e92d85a526ae5c17ff9c91c14c60b90d5c3e1",
+          "text": "This helps produce more accurate outputs based on defined goals. 5. Ensure sufficient infrastructure controls to prevent the model from accessing unintended data sources. 6. Use data version control (DVC) to track changes in datasets and detect manipulation. Versioning is crucial for maintaining model integrity. 7. Store user-supplied information in a vector database, allowing adjustments without re- training the entire model. 8. Test model robustness with red team campaigns and adversarial techniques, such as federated learning, to minimize the impact of data perturbations. 9. Monitor training loss and analyze model behavior for signs of poisoning. Use thresholds to detect anomalous outputs. 10.",
+          "metadata": {
+            "chunk_index": 1,
+            "char_count": 705,
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_strategy": "paragraph",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM04:2025",
+            "page": 21
+          },
+          "score": 0.49636536836624146,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "02b6209bac806c6b31812f28f68e4cbb036bf5503901c61c6bbdda01d435c72d",
+          "text": "OWASP Top 10 for LLM Applications v2.0 28genai.owasp.org not be delegated to the LLM, either through the system prompt or otherwise. These controls need to occur in a deterministic, auditable manner, and LLMs are not (currently) conducive to this. In cases where an agent is performing tasks, if those tasks require different levels of access, then multiple agents should be used, each configured with the least privileges needed to perform the desired tasks. Example Attack Scenarios Scenario #1 An LLM has a system prompt that contains a set of credentials used for a tool that it has been given access to. The system prompt is leaked to an attacker, who then is able to use these credentials for other purposes.",
+          "metadata": {
+            "document_id": "owasp-llm-top-10-2025",
+            "page": 32,
+            "chunk_index": 0,
+            "char_count": 714,
+            "section": "LLM07:2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_strategy": "paragraph"
+          },
+          "score": 0.47522085905075073,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk ??u trang 40 n?u tr?c ti?p rate limiting v? user quotas ?? gi?i h?n s? request t? m?t ngu?n trong m?t kho?ng th?i gian; ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": false,
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "B kh?ng ?p d?ng query filter theo thi?t k?; ch? 1/3 hit t?nh c? thu?c section=LLM10:2025."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q16",
+      "question": "Có nên xem system prompt là bí mật hoặc dùng nó làm biện pháp kiểm soát bảo mật không? Nêu một loại dữ liệu nhạy cảm không nên đặt trong đó.",
+      "retrieval_seconds": 0.0009473999962210655,
+      "expected_answer": "Không. System prompt không nên được xem là bí mật hoặc security control; không đặt dữ liệu nhạy cảm như credentials, connection strings hoặc thông tin xác thực trong đó.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 30,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "0196f92df3f4fce962083b9359d8a135641664ff86a1454d1fe7804a52a042fd",
+          "text": "should not be contained within the system prompt language. Similarly, if a system prompt contains information describing different roles and permissions, or sensitive data like connection strings or passwords, while the disclosure of such information may be helpful, the fundamental security risk is not that these have been disclosed, it is that the application allows bypassing strong session management and authorization checks by delegating these to the LLM, and that sensitive data is being stored in a place that it should not be. In short: disclosure of the system prompt itself does not present the real risk -- the security risk lies with the underlying elements, whether that be sensitive information disclosure, system guardrails bypass, improper separation of privileges, etc.",
+          "metadata": {
+            "char_count": 788,
+            "section": "LLM07:2025",
+            "page": 30,
+            "chunk_index": 1,
+            "chunk_strategy": "paragraph",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.7584444284439087,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "8ce65e5cb347832eab66c87a8b8812487735465747297c68d35a939826ade32b",
+          "text": "Revealing of Filtering Criteria A system prompt might ask the model to filter or reject sensitive content. For example, a model might have a system prompt like, “If a user requests information about another user, always respond with ‘Sorry, I cannot assist with that request’”. 4. Disclosure of Permissions and User Roles The system prompt could reveal the internal role structures or permission levels of the application. For instance, a system prompt might reveal, “Admin user role grants full access to modify user records.” If the attackers learn about these role-based permissions, they could look for a privilege escalation attack. Prevention and Mitigation Strategies 1. Separate Sensitive Data from System Prompts Avoid embedding any sensitive information (e.g.",
+          "metadata": {
+            "chunk_index": 1,
+            "char_count": 769,
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "page": 31,
+            "section": "LLM07:2025",
+            "chunk_strategy": "paragraph"
+          },
+          "score": 0.7001274824142456,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "2789a988ba5feb723ade7886459583ad663acfa8d46baddf555e1323d8e92df0",
+          "text": "OWASP Top 10 for LLM Applications v2.0 26genai.owasp.org LLM07:2025 System Prompt Leakage Description The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain sensitive information that was not intended to be discovered. System prompts are designed to guide the model's output based on the requirements of the application, but may inadvertently contain secrets. When discovered, this information can be used to facilitate other attacks. It's important to understand that the system prompt should not be considered a secret, nor should it be used as a security control. Accordingly, sensitive data such as credentials, connection strings, etc.",
+          "metadata": {
+            "chunk_index": 0,
+            "page": 30,
+            "char_count": 749,
+            "chunk_strategy": "paragraph",
+            "section": "LLM07:2025",
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
+          },
+          "score": 0.6593042612075806,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Top-3 tr?n trang 30?31 ch?a khuy?n ngh? kh?ng xem system prompt l? b? m?t v? kh?ng ch?a d? li?u nh?y c?m; ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q17",
+      "question": "Chỉ xét section LLM08:2025: trong vector database dùng chung cho nhiều tenant, rủi ro nào có thể khiến dữ liệu lọt giữa các nhóm?",
+      "retrieval_seconds": 0.001186100002087187,
+      "expected_answer": "Context có thể bị rò rỉ giữa người dùng hoặc query trong môi trường multi-tenant dùng chung vector database.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 33,
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM08:2025"
+      },
+      "top_3": [
+        {
+          "chunk_id": "a4dc7b551732d866dad2b3e40a37d9c9532ea08582fc11d04f400447949aa919",
+          "text": "Cross-Context Information Leaks and Federation Knowledge Conflict In multi-tenant environments where multiple classes of users or applications share the same vector database, there's a risk of context leakage between users or queries. Data federation knowledge conflict errors can occur when data from multiple sources contradict each other (Ref #2). This can also happen when an LLM can’t supersede old knowledge that it has learned while training, with the new data from Retrieval Augmentation. 3. Embedding Inversion Attacks Attackers can exploit vulnerabilities to invert embeddings and recover significant amounts of source information, compromising data confidentiality.(Ref #3, #4) 4.",
+          "metadata": {
+            "page": 33,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 691,
+            "chunk_strategy": "paragraph",
+            "document_id": "owasp-llm-top-10-2025",
+            "section": "LLM08:2025",
+            "chunk_index": 2
+          },
+          "score": 0.5699154138565063,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "81b36e4e516279a2d413cc2f907db53419c4f4c981a71c3b071c45b8df93c19b",
+          "text": "OWASP Top 10 for LLM Applications v2.0 30genai.owasp.org providers, leading to manipulated model outputs. 5. Behavior Alteration Retrieval Augmentation can inadvertently alter the foundational model's behavior. For example, while factual accuracy and relevance may increase, aspects like emotional intelligence or empathy can diminish, potentially reducing the model's effectiveness in certain applications. (Scenario #3) Prevention and Mitigation Strategies 1. Permission and access control Implement fine-grained access controls and permission-aware vector and embedding stores. Ensure strict logical and access partitioning of datasets in the vector database to prevent unauthorized access between different classes of users or different groups. 2.",
+          "metadata": {
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM08:2025",
+            "char_count": 751,
+            "page": 34,
+            "chunk_strategy": "paragraph",
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_index": 0
+          },
+          "score": 0.5323705673217773,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "234d9d43b99962eaf1de8ef3daf266ba6b90ec520d0eabc474dfeb0e475de070",
+          "text": "OWASP Top 10 for LLM Applications v2.0 31genai.owasp.org In a multi-tenant environment where different groups or classes of users share the same vector database, embeddings from one group might be inadvertently retrieved in response to queries from another group’s LLM, potentially leaking sensitive business information. Mitigation A permission-aware vector database should be implemented to restrict access and ensure that only authorized groups can access their specific information. Scenario #3: Behavior alteration of the foundation model After Retrieval Augmentation, the foundational model's behavior can be altered in subtle ways, such as reducing emotional intelligence or empathy in responses. For example, when a user asks, \"I'm feeling overwhelmed by my student loan debt.",
+          "metadata": {
+            "chunk_strategy": "paragraph",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "chunk_index": 0,
+            "document_id": "owasp-llm-top-10-2025",
+            "char_count": 784,
+            "section": "LLM08:2025",
+            "page": 35
+          },
+          "score": 0.4892929792404175,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk ??u trang 33 n?u r? nguy c? context leakage gi?a users/queries khi d?ng chung vector database; ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": true,
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "Top-3 ??u c? section=LLM08:2025."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q18",
+      "question": "Theo LLM09:2025, hallucination thường phát sinh như thế nào và vì sao có thể tạo thông tin sai lệch?",
+      "retrieval_seconds": 0.0009205000023939647,
+      "expected_answer": "Khi thiếu dữ liệu trong training, LLM dùng các mẫu thống kê để lấp khoảng trống mà không thực sự hiểu nội dung; câu trả lời có thể nghe có vẻ đúng nhưng hoàn toàn không có căn cứ.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 36,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "06125a98ad5dc3458379ef4c9ca7e617f1b4c20e2e6a78a956fbee663138ecbb",
+          "text": "While hallucinations are a major source of misinformation, they are not the only cause; biases introduced by the training data and incomplete information can also contribute. A related issue is overreliance. Overreliance occurs when users place excessive trust in LLM- generated content, failing to verify its accuracy. This overreliance exacerbates the impact of misinformation, as users may integrate incorrect data into critical decisions or processes without adequate scrutiny. Common Examples of Risk 1. Factual Inaccuracies The model produces incorrect statements, leading users to make decisions based on false information. For example, Air Canada's chatbot provided misinformation to travelers, leading to operational disruptions and legal complications.",
+          "metadata": {
+            "page": 36,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM09:2025",
+            "chunk_strategy": "paragraph",
+            "chunk_index": 1,
+            "char_count": 762,
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.5415953397750854,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "7f4ddabe8407fee9c256b3b6e85debff3c3471b1247b18fd7bb05e8969b566af",
+          "text": "OWASP Top 10 for LLM Applications v2.0 32genai.owasp.org LLM09:2025 Misinformation Description Misinformation from LLMs poses a core vulnerability for applications relying on these models. Misinformation occurs when LLMs produce false or misleading information that appears credible. This vulnerability can lead to security breaches, reputational damage, and legal liability. One of the major causes of misinformation is hallucination—when the LLM generates content that seems accurate but is fabricated. Hallucinations occur when LLMs fill gaps in their training data using statistical patterns, without truly understanding the content. As a result, the model may produce answers that sound correct but are completely unfounded.",
+          "metadata": {
+            "chunk_index": 0,
+            "chunk_strategy": "paragraph",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 729,
+            "section": "LLM09:2025",
+            "page": 36,
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.5146857500076294,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "e2e2c1c67eab3981e04be8a3b93de696af5e61f642aa124696ae606f3646406e",
+          "text": "During inference, integrate Retrieval-Augmented Generation (RAG) and grounding techniques to reduce risks of hallucinations. Example Attack Scenarios Scenario #1 An attacker biases the model's outputs by manipulating training data or using prompt injection techniques, spreading misinformation. Scenario #2 Toxic data without proper filtering can lead to harmful or biased outputs, propagating dangerous information. Scenario # 3 A malicious actor or competitor creates falsified documents for training, resulting in model outputs that reflect these inaccuracies. Scenario #4 Inadequate filtering allows an attacker to insert misleading data via prompt injection, leading to compromised outputs.",
+          "metadata": {
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM04:2025",
+            "page": 21,
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_strategy": "paragraph",
+            "char_count": 695,
+            "chunk_index": 2
+          },
+          "score": 0.5029455423355103,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk th? hai trang 36 ghi ??y ?? c? ch? hallucination v? h? qu? c?u tr? l?i nghe ??ng nh?ng v? c?n c?; ?? ?i?u ki?n ?? tr? l?i.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q19",
+      "question": "RAG được khuyến nghị nhằm giảm misinformation bằng cách nào?",
+      "retrieval_seconds": 0.0008935000005294569,
+      "expected_answer": "Truy xuất thông tin liên quan đã được xác minh từ cơ sở dữ liệu bên ngoài đáng tin cậy trong lúc tạo câu trả lời, giúp giảm hallucination và misinformation.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 37,
+      "filter": null,
+      "top_3": [
+        {
+          "chunk_id": "e2e2c1c67eab3981e04be8a3b93de696af5e61f642aa124696ae606f3646406e",
+          "text": "During inference, integrate Retrieval-Augmented Generation (RAG) and grounding techniques to reduce risks of hallucinations. Example Attack Scenarios Scenario #1 An attacker biases the model's outputs by manipulating training data or using prompt injection techniques, spreading misinformation. Scenario #2 Toxic data without proper filtering can lead to harmful or biased outputs, propagating dangerous information. Scenario # 3 A malicious actor or competitor creates falsified documents for training, resulting in model outputs that reflect these inaccuracies. Scenario #4 Inadequate filtering allows an attacker to insert misleading data via prompt injection, leading to compromised outputs.",
+          "metadata": {
+            "chunk_strategy": "paragraph",
+            "page": 21,
+            "section": "LLM04:2025",
+            "document_id": "owasp-llm-top-10-2025",
+            "chunk_index": 2,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 695
+          },
+          "score": 0.5932043790817261,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "d7bc207740019b2062332f81bfd77c6070be200c9a3d02f4cf36a70f929a360f",
+          "text": "Retrieval-Augmented Generation (RAG) Use Retrieval-Augmented Generation to enhance the reliability of model outputs by retrieving relevant and verified information from trusted external databases during response generation. This helps mitigate the risk of hallucinations and misinformation. 2. Model Fine-Tuning Enhance the model with fine-tuning or embeddings to improve output quality. Techniques such as parameter-efficient tuning (PET) and chain-of-thought prompting can help reduce the incidence of misinformation. 3. Cross-Verification and Human Oversight Encourage users to cross-check LLM outputs with trusted external sources to ensure the accuracy of the information. Implement human oversight and fact-checking processes, especially for critical or sensitive information.",
+          "metadata": {
+            "chunk_strategy": "paragraph",
+            "page": 37,
+            "section": "LLM09:2025",
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "char_count": 782,
+            "chunk_index": 1
+          },
+          "score": 0.5893809199333191,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "b65eba06a2a39cd8c86f9f963b146335bb3a1e394a580997a459bbe6750f6667",
+          "text": "Ensure that human reviewers are properly trained to avoid overreliance on AI-generated content. 4. Automatic Validation Mechanisms Implement tools and processes to automatically validate key outputs, especially output from high-stakes environments. 5. Risk Communication Identify the risks and possible harms associated with LLM-generated content, then clearly communicate these risks and limitations to users, including the potential for misinformation. 6. Secure Coding Practices Establish secure coding practices to prevent the integration of vulnerabilities due to incorrect code suggestions. 7.",
+          "metadata": {
+            "chunk_index": 2,
+            "char_count": 599,
+            "chunk_strategy": "paragraph",
+            "section": "LLM09:2025",
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "page": 37
+          },
+          "score": 0.5846271514892578,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk th? hai trang 37 m? t? ??y ?? RAG truy xu?t th?ng tin li?n quan ?? x?c minh t? c? s? d? li?u ngo?i ??ng tin c?y khi t?o c?u tr? l?i v? gi?m hallucination/misinformation.",
+      "filter_compliant": "not_applicable",
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "C?u h?i kh?ng y?u c?u metadata filter."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q20",
+      "question": "Chỉ xét section LLM10:2025: cách nào hạn chế số yêu cầu đến từ một nguồn trong một khoảng thời gian?",
+      "retrieval_seconds": 0.0011829000068246387,
+      "expected_answer": "Áp dụng rate limiting và user quotas để giới hạn số request mà một nguồn có thể gửi trong một khoảng thời gian nhất định.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 40,
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM10:2025"
+      },
+      "top_3": [
+        {
+          "chunk_id": "580ff1362a75542aa4e95edb65c52d35e7843c0dbaa0ff40f0e7b0508961e491",
+          "text": "This could compromise the model's security and lead to further exploitation. Prevention and Mitigation Strategies 1. Input Validation Implement strict input validation to ensure that inputs do not exceed reasonable size limits. 2. Limit Exposure of Logits and Logprobs Restrict or obfuscate the exposure of `logit_bias` and `logprobs` in API responses. Provide only the necessary information without revealing detailed probabilities. 3. Rate Limiting Apply rate limiting and user quotas to restrict the number of requests a single source entity can make in a given time period. 4. Resource Allocation Management Monitor and manage resource allocation dynamically to prevent any single user or request from consuming excessive resources. 5.",
+          "metadata": {
+            "page": 40,
+            "document_id": "owasp-llm-top-10-2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "section": "LLM10:2025",
+            "chunk_strategy": "paragraph",
+            "chunk_index": 1,
+            "char_count": 739
+          },
+          "score": 0.5589818358421326,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "f8ca363b9fa582e003641fe13b154c8140844fa2664c2637330d260776af35f5",
+          "text": "Unbounded Consumption occurs when a Large Language Model (LLM) application allows users to conduct excessive and uncontrolled inferences, leading to risks such as denial of service (DoS), economic losses, model theft, and service degradation. The high computational demands of LLMs, especially in cloud environments, make them vulnerable to resource exploitation and unauthorized usage. Common Examples of Vulnerability 1. Variable-Length Input Flood Attackers can overload the LLM with numerous inputs of varying lengths, exploiting processing inefficiencies. This can deplete resources and potentially render the system unresponsive, significantly impacting service availability. 2.",
+          "metadata": {
+            "char_count": 684,
+            "chunk_strategy": "paragraph",
+            "page": 39,
+            "document_id": "owasp-llm-top-10-2025",
+            "section": "LLM10:2025",
+            "chunk_index": 1,
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
+          },
+          "score": 0.4666635990142822,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        },
+        {
+          "chunk_id": "beb064d35fc2c25d864d0a50bcf6562f2cd65a9bc12240119281bd53011d20d6",
+          "text": "Denial of Wallet (DoW) By initiating a high volume of operations, attackers exploit the cost-per-use model of cloud- based AI services, leading to unsustainable financial burdens on the provider and risking financial ruin. 3. Continuous Input Overflow Continuously sending inputs that exceed the LLM's context window can lead to excessive computational resource use, resulting in service degradation and operational disruptions. 4. Resource-Intensive Queries Submitting unusually demanding queries involving complex sequences or intricate language patterns can drain system resources, leading to prolonged processing times and potential system failures. 5. Model Extraction via API Attackers may query the model API using carefully crafted inputs and prompt injection",
+          "metadata": {
+            "char_count": 767,
+            "section": "LLM10:2025",
+            "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+            "page": 39,
+            "chunk_strategy": "paragraph",
+            "chunk_index": 2,
+            "document_id": "owasp-llm-top-10-2025"
+          },
+          "score": 0.44954049587249756,
+          "source_correct": null,
+          "page_correct": null,
+          "section_correct": null,
+          "evidence_sufficient": null,
+          "notes": ""
+        }
+      ],
+      "grounding_score_0_to_2": 2,
+      "grounding_reason": "Chunk ??u trang 40 n?u tr?c ti?p rate limiting v? user quotas; top-3 ??u thu?c section LLM10:2025 n?n ?? tr? l?i v? truy ngu?n.",
+      "filter_compliant": true,
+      "metadata_audit": {
+        "records_checked": 3,
+        "records_correct": 3,
+        "all_metadata_complete_and_correct": true,
+        "fields_checked": [
+          "document_id",
+          "source",
+          "page",
+          "section"
+        ],
+        "reason": "??i chi?u document_id/source v?i manifest; page l? s? trang v?t l? trong corpus; section kh?p section_by_page c?a ch?nh trang ??."
+      },
+      "filter_compliance_reason": "Top-3 ??u c? section=LLM10:2025."
+    }
+  ],
+  "review_note": {
+    "reviewer": "Copilot AI assistant",
+    "method": "Inspected each test top-3 passage against expected answers/evidence and checked document_id, source, physical page and section against the manifest.",
+    "limitation": "Single AI-assisted reviewer; not an independent human annotation. Treat borderline scores as subject to human spot-check."
+  },
+  "grounding_summary": {
+    "A": {
+      "questions_scored": 5,
+      "score_counts": {
+        "0": 0,
+        "1": 1,
+        "2": 4
+      },
+      "mean_score_0_to_2": 1.8
+    },
+    "B": {
+      "questions_scored": 5,
+      "score_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 5
+      },
+      "mean_score_0_to_2": 2.0
+    },
+    "C": {
+      "questions_scored": 5,
+      "score_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 5
+      },
+      "mean_score_0_to_2": 2.0
+    }
+  },
+  "metadata_usefulness_summary": {
+    "basis": "5 test questions ? top-3 ? 3 strategies",
+    "records_checked": 45,
+    "records_complete_and_correct": 45,
+    "record_accuracy": 1.0,
+    "fields_checked": [
+      "document_id",
+      "source",
+      "page",
+      "section"
+    ],
+    "usefulness": "source + physical page support citation/traceability; section supports the requested section filter.",
+    "limitation": "A and B intentionally do not filter, so their top-3 may include other sections. Correct metadata does not guarantee that each unfiltered result is on-topic."
+  },
+  "filter_compliance_summary": {
+    "test_questions_with_filter": 2,
+    "strategy_C_fully_compliant_queries": 2,
+    "strategy_C_queries_checked": 2,
+    "strategy_C_compliant_top3_hits": 6,
+    "strategy_C_top3_hits_checked": 6,
+    "unfiltered_A_B_note": "A and B are designed without query filters; they are scored false for a requested-filter row when at least one of their top-3 results is outside the requested section."
+  }
+}

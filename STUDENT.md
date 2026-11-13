@@ -1,8 +1,7 @@
 # Thông tin học viên
 
-- Họ và tên:
-- MSSV:
-- Lớp: L3A / L3B / khác:
-- Chủ đề và corpus:
-- Repo bài nộp:
-- Commit chốt bài:
+- Họ và tên: Chu Mai Hồng
+- MSSV: 2A202603377
+- Lớp: L3A
+- Repo bài nộp: https://github.com/maihong1208/K5-L3-Day06-ChuMaiHong-2A202603377-DataIngestionEngineering
+- Commit chốt bài: **[TODO — hash sau khi commit]**

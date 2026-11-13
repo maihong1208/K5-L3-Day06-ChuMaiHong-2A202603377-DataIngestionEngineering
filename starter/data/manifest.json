@@ -1,0 +1,202 @@
+{
+  "documents": [
+    {
+      "source_id": "owasp-llm-top-10-2025",
+      "title": "OWASP Top 10 for LLM Applications 2025",
+      "source_path_or_url": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+      "local_file": "OWASP-Top-10-for-LLMs-v2025.pdf",
+      "license_or_permission": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), stated on physical PDF page 2. Attribute OWASP GenAI Security Project and share adaptations under the same license.",
+      "attribution": "OWASP GenAI Security Project, OWASP Top 10 for LLM Applications 2025. Adaptation: selected physical pages and normalized extracted text.",
+      "accessed_at": "2026-11-13",
+      "version": "2025",
+      "physical_page_count": 45,
+      "included_physical_pages": [
+        {
+          "page": 7,
+          "normalized_characters": 2164
+        },
+        {
+          "page": 8,
+          "normalized_characters": 2635
+        },
+        {
+          "page": 9,
+          "normalized_characters": 2482
+        },
+        {
+          "page": 10,
+          "normalized_characters": 2283
+        },
+        {
+          "page": 11,
+          "normalized_characters": 2235
+        },
+        {
+          "page": 12,
+          "normalized_characters": 1714
+        },
+        {
+          "page": 13,
+          "normalized_characters": 1919
+        },
+        {
+          "page": 15,
+          "normalized_characters": 1962
+        },
+        {
+          "page": 16,
+          "normalized_characters": 2980
+        },
+        {
+          "page": 17,
+          "normalized_characters": 3001
+        },
+        {
+          "page": 18,
+          "normalized_characters": 2943
+        },
+        {
+          "page": 19,
+          "normalized_characters": 2045
+        },
+        {
+          "page": 20,
+          "normalized_characters": 2165
+        },
+        {
+          "page": 21,
+          "normalized_characters": 2175
+        },
+        {
+          "page": 22,
+          "normalized_characters": 1476
+        },
+        {
+          "page": 23,
+          "normalized_characters": 2177
+        },
+        {
+          "page": 24,
+          "normalized_characters": 2447
+        },
+        {
+          "page": 25,
+          "normalized_characters": 1615
+        },
+        {
+          "page": 26,
+          "normalized_characters": 1713
+        },
+        {
+          "page": 27,
+          "normalized_characters": 2562
+        },
+        {
+          "page": 28,
+          "normalized_characters": 3125
+        },
+        {
+          "page": 29,
+          "normalized_characters": 1499
+        },
+        {
+          "page": 30,
+          "normalized_characters": 2375
+        },
+        {
+          "page": 31,
+          "normalized_characters": 2777
+        },
+        {
+          "page": 32,
+          "normalized_characters": 1503
+        },
+        {
+          "page": 33,
+          "normalized_characters": 2165
+        },
+        {
+          "page": 34,
+          "normalized_characters": 2341
+        },
+        {
+          "page": 35,
+          "normalized_characters": 2147
+        },
+        {
+          "page": 36,
+          "normalized_characters": 1954
+        },
+        {
+          "page": 37,
+          "normalized_characters": 2549
+        },
+        {
+          "page": 38,
+          "normalized_characters": 2372
+        },
+        {
+          "page": 39,
+          "normalized_characters": 2055
+        },
+        {
+          "page": 40,
+          "normalized_characters": 2337
+        },
+        {
+          "page": 41,
+          "normalized_characters": 2333
+        },
+        {
+          "page": 42,
+          "normalized_characters": 1852
+        }
+      ],
+      "selected_page_count": 35,
+      "total_normalized_characters": 78077,
+      "section_by_page": {
+        "7": "LLM01:2025",
+        "8": "LLM01:2025",
+        "9": "LLM01:2025",
+        "10": "LLM01:2025",
+        "11": "LLM02:2025",
+        "12": "LLM02:2025",
+        "13": "LLM02:2025",
+        "15": "LLM03:2025",
+        "16": "LLM03:2025",
+        "17": "LLM03:2025",
+        "18": "LLM03:2025",
+        "19": "LLM03:2025",
+        "20": "LLM04:2025",
+        "21": "LLM04:2025",
+        "22": "LLM04:2025",
+        "23": "LLM05:2025",
+        "24": "LLM05:2025",
+        "25": "LLM05:2025",
+        "26": "LLM06:2025",
+        "27": "LLM06:2025",
+        "28": "LLM06:2025",
+        "29": "LLM06:2025",
+        "30": "LLM07:2025",
+        "31": "LLM07:2025",
+        "32": "LLM07:2025",
+        "33": "LLM08:2025",
+        "34": "LLM08:2025",
+        "35": "LLM08:2025",
+        "36": "LLM09:2025",
+        "37": "LLM09:2025",
+        "38": "LLM09:2025",
+        "39": "LLM10:2025",
+        "40": "LLM10:2025",
+        "41": "LLM10:2025",
+        "42": "LLM10:2025"
+      },
+      "selection_note": "Selected 35 pages containing the main LLM01-LLM10 sections: physical pages 7-13 and 15-42. Physical page 14 is a short cross-reference list and was excluded.",
+      "extraction_method": "pypdf 6.21.4; Unicode NFC and whitespace normalization; page numbers remain physical 1-based PDF page numbers.",
+      "extraction_notes": [
+        "All 35 selected pages yielded extractable text and contained at least 1,476 normalized characters.",
+        "pypdf reported an incorrect startxref pointer and object-stream decompression errors while opening the PDF. Page text was extracted, but the original PDF should be visually spot-checked before final submission."
+      ]
+    }
+  ]
+}

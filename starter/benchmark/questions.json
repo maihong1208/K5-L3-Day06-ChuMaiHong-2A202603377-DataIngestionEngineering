@@ -1,0 +1,253 @@
+{
+  "dataset_id": "owasp-llm-top-10-2025-benchmark-v1",
+  "source_id": "owasp-llm-top-10-2025",
+  "source_file": "data/OWASP-Top-10-for-LLMs-v2025.pdf",
+  "page_numbering": "gold_page uses 1-based physical page numbers in the original PDF.",
+  "split_policy": "The 15 dev and 5 test questions were assigned before running retrieval experiments. Do not tune against test results.",
+  "metadata_schema": {
+    "section": {
+      "type": "string",
+      "values": [
+        "LLM01:2025",
+        "LLM02:2025",
+        "LLM03:2025",
+        "LLM04:2025",
+        "LLM05:2025",
+        "LLM06:2025",
+        "LLM07:2025",
+        "LLM08:2025",
+        "LLM09:2025",
+        "LLM10:2025"
+      ],
+      "source": "Section headings printed in the PDF; propagate each heading to its pages until the next section heading.",
+      "filter_note": "For a question with a filter, the requested section is explicit in the question before retrieval. Do not add gold_source_id or gold_page to the query or filter."
+    }
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "direct",
+      "question": "Theo OWASP LLM01:2025, prompt injection làm thay đổi điều gì ở LLM?",
+      "expected_answer": "Prompt do người dùng cung cấp có thể làm thay đổi hành vi hoặc đầu ra của LLM theo cách ngoài dự kiến.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 7,
+      "evidence_quote": "A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways."
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "direct",
+      "question": "RAG và fine-tuning có loại bỏ hoàn toàn lỗ hổng prompt injection không?",
+      "expected_answer": "Không. Chúng có thể làm đầu ra liên quan và chính xác hơn nhưng không loại bỏ hoàn toàn prompt injection.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 7,
+      "evidence_quote": "While techniques like Retrieval Augmented Generation (RAG) and fine-tuning aim to make LLM outputs more relevant and accurate, research shows that they do not fully mitigate prompt injection vulnerabilities."
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Chỉ xét section LLM01:2025: prompt injection có thể thao túng quy trình nào?",
+      "expected_answer": "Prompt injection có thể thao túng các quy trình ra quyết định quan trọng.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 8,
+      "evidence_quote": "Manipulating critical decision-making processes",
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM01:2025"
+      }
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "direct",
+      "question": "Một cách giảm tác động của prompt injection là xử lý định dạng đầu ra như thế nào?",
+      "expected_answer": "Quy định định dạng đầu ra rõ ràng, yêu cầu lập luận và trích dẫn nguồn chi tiết, rồi dùng mã xác định để kiểm tra đầu ra có tuân thủ định dạng hay không.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 8,
+      "evidence_quote": "Specify clear output formats, request detailed reasoning and source citations, and use deterministic code to validate adherence to these formats."
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "direct",
+      "question": "Tài liệu khuyến nghị kiểm soát các hành động rủi ro cao có đặc quyền bằng cách nào?",
+      "expected_answer": "Dùng human-in-the-loop để yêu cầu con người phê duyệt các thao tác đặc quyền, nhằm ngăn hành động trái phép.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 9,
+      "evidence_quote": "Require human approval for high-risk actions\nImplement human-in-the-loop controls for privileged operations to prevent unauthorized actions."
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "Trong kịch bản tóm tắt website, nội dung ẩn trên trang có thể khiến LLM làm gì với cuộc trò chuyện riêng?",
+      "expected_answer": "Chèn một hình ảnh liên kết tới URL, dẫn đến việc nội dung cuộc trò chuyện riêng bị đưa ra ngoài.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 9,
+      "evidence_quote": "A user employs an LLM to summarize a webpage containing hidden instructions that cause the LLM to insert an image linking to a URL, leading to exfiltration of the the private conversation."
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "direct",
+      "question": "Nêu ba loại dữ liệu nhạy cảm mà LLM02:2025 đề cập.",
+      "expected_answer": "Ví dụ: thông tin nhận dạng cá nhân (PII), thông tin tài chính, hồ sơ sức khỏe, dữ liệu kinh doanh mật, thông tin xác thực bảo mật hoặc tài liệu pháp lý.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 11,
+      "evidence_quote": "This includes personal identifiable information (PII), financial details, health records, confidential business data, security credentials, and legal documents."
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "direct",
+      "question": "Theo biện pháp data sanitization của LLM02:2025, cần làm gì với dữ liệu nhạy cảm trước khi dùng để huấn luyện?",
+      "expected_answer": "Làm sạch hoặc che/masking nội dung nhạy cảm trước khi đưa dữ liệu vào huấn luyện.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 12,
+      "evidence_quote": "This includes scrubbing or masking sensitive content before it is used in training."
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Chỉ xét section LLM02:2025: differential privacy giúp giảm rủi ro riêng tư bằng cơ chế nào?",
+      "expected_answer": "Thêm nhiễu vào dữ liệu hoặc đầu ra để khiến việc reverse-engineer các điểm dữ liệu cá nhân trở nên khó khăn.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 12,
+      "evidence_quote": "Apply techniques that add noise to the data or outputs, making it difficult for attackers to reverse-engineer individual data points.",
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM02:2025"
+      }
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "Chuỗi cung ứng LLM có thể bị ảnh hưởng theo những cách nào khi các thành phần bên ngoài bị thao túng?",
+      "expected_answer": "Tính toàn vẹn của dữ liệu huấn luyện, mô hình và nền tảng triển khai có thể bị ảnh hưởng, dẫn đến đầu ra thiên lệch, sự cố bảo mật hoặc lỗi hệ thống.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 15,
+      "evidence_quote": "LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in biased outputs, security breaches, or system failures."
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "direct",
+      "question": "Rủi ro giấy phép trong phát triển AI phát sinh vì giấy phép dataset có thể hạn chế những gì?",
+      "expected_answer": "Giấy phép dataset có thể hạn chế cách sử dụng, phân phối hoặc thương mại hóa dữ liệu.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 15,
+      "evidence_quote": "Dataset licenses may restrict usage, distribution, or commercialization."
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "direct",
+      "question": "Data poisoning là gì và có thể xảy ra ở những giai đoạn nào trong vòng đời LLM?",
+      "expected_answer": "Đó là việc thao túng dữ liệu pre-training, fine-tuning hoặc embedding để đưa vào lỗ hổng, backdoor hoặc thiên lệch; có thể nhắm vào cả ba giai đoạn này.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 20,
+      "evidence_quote": "Data poisoning occurs when pre-training, fine-tuning, or embedding data is manipulated to introduce vulnerabilities, backdoors, or biases."
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "direct",
+      "question": "Tài liệu đề xuất làm gì để theo dõi nguồn gốc dữ liệu và các lần biến đổi dữ liệu?",
+      "expected_answer": "Theo dõi nguồn gốc và biến đổi bằng công cụ như OWASP CycloneDX hoặc ML-BOM, đồng thời xác minh tính hợp lệ của dữ liệu ở mọi giai đoạn phát triển mô hình.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 21,
+      "evidence_quote": "Track data origins and transformations using tools like OWASP CycloneDX or ML-BOM. Verify data legitimacy during all model development stages."
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "paraphrase",
+      "question": "“Improper Output Handling” nói đến vấn đề gì sau khi LLM tạo nội dung?",
+      "expected_answer": "Đầu ra của LLM không được xác thực, làm sạch và xử lý đầy đủ trước khi chuyển cho các thành phần hoặc hệ thống khác.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 23,
+      "evidence_quote": "Improper Output Handling refers specifically to insufficient validation, sanitization, and handling of the outputs generated by large language models before they are passed downstream to other components and systems."
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Chỉ xét section LLM06:2025: ba nguyên nhân gốc thường gặp của Excessive Agency là gì?",
+      "expected_answer": "Excessive functionality, excessive permissions và excessive autonomy.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 26,
+      "evidence_quote": "The root cause of Excessive Agency is typically one or more of:\n• excessive functionality;\n• excessive permissions;\n• excessive autonomy.",
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM06:2025"
+      }
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "condition",
+      "question": "Có nên xem system prompt là bí mật hoặc dùng nó làm biện pháp kiểm soát bảo mật không? Nêu một loại dữ liệu nhạy cảm không nên đặt trong đó.",
+      "expected_answer": "Không. System prompt không nên được xem là bí mật hoặc security control; không đặt dữ liệu nhạy cảm như credentials, connection strings hoặc thông tin xác thực trong đó.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 30,
+      "evidence_quote": "the system prompt should not be considered a secret, nor should it be used as a security control. Accordingly, sensitive data such as credentials, connection strings, etc. should not be contained within the system prompt language."
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "Chỉ xét section LLM08:2025: trong vector database dùng chung cho nhiều tenant, rủi ro nào có thể khiến dữ liệu lọt giữa các nhóm?",
+      "expected_answer": "Context có thể bị rò rỉ giữa người dùng hoặc query trong môi trường multi-tenant dùng chung vector database.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 33,
+      "evidence_quote": "In multi-tenant environments where multiple classes of users or applications share the same vector database, there's a risk of context leakage between users or queries.",
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM08:2025"
+      }
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "condition",
+      "question": "Theo LLM09:2025, hallucination thường phát sinh như thế nào và vì sao có thể tạo thông tin sai lệch?",
+      "expected_answer": "Khi thiếu dữ liệu trong training, LLM dùng các mẫu thống kê để lấp khoảng trống mà không thực sự hiểu nội dung; câu trả lời có thể nghe có vẻ đúng nhưng hoàn toàn không có căn cứ.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 36,
+      "evidence_quote": "Hallucinations occur when LLMs fill gaps in their training data using statistical patterns, without truly understanding the content. As a result, the model may produce answers that sound correct but are completely unfounded."
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "direct",
+      "question": "RAG được khuyến nghị nhằm giảm misinformation bằng cách nào?",
+      "expected_answer": "Truy xuất thông tin liên quan đã được xác minh từ cơ sở dữ liệu bên ngoài đáng tin cậy trong lúc tạo câu trả lời, giúp giảm hallucination và misinformation.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 37,
+      "evidence_quote": "Use Retrieval-Augmented Generation to enhance the reliability of model outputs by retrieving relevant and verified information from trusted external databases during response generation. This helps mitigate the risk of hallucinations and misinformation."
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "Chỉ xét section LLM10:2025: cách nào hạn chế số yêu cầu đến từ một nguồn trong một khoảng thời gian?",
+      "expected_answer": "Áp dụng rate limiting và user quotas để giới hạn số request mà một nguồn có thể gửi trong một khoảng thời gian nhất định.",
+      "gold_source_id": "owasp-llm-top-10-2025",
+      "gold_page": 40,
+      "evidence_quote": "Apply rate limiting and user quotas to restrict the number of requests a single source entity can make in a given time period.",
+      "filter": {
+        "field": "section",
+        "operator": "eq",
+        "value": "LLM10:2025"
+      }
+    }
+  ]
+}

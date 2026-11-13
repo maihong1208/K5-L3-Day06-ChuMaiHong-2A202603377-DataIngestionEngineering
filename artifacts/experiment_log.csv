@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_character_window,500,50,"document_id;source;page;section",none,"sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2","Retrospective: overlapping fixed windows should preserve coverage, but may split context.",0.3333,0.6000,0.4000,0.6000,"Counts: dev 5/15 Hit@1 and 9/15 Evidence Hit@3; test 2/5 and 3/5. 189 chunks; full ingestion 4.583 s; $0. Hypothesis recorded after the run, not preregistered."
+B,paragraph,800,0,"document_id;source;page;section",none,"sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2","Retrospective: paragraph-aware chunks should retain context and reduce chunk count versus A.",0.3333,0.6667,0.4000,0.8000,"Counts: dev 5/15 Hit@1 and 10/15 Evidence Hit@3; test 2/5 and 4/5. 124 chunks; full ingestion 4.497 s; $0. Hypothesis recorded after the run, not preregistered."
+C,paragraph,800,0,"document_id;source;page;section","section equality when question specifies section","sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2","Retrospective: filtering to the requested section should constrain results without changing chunking or vectors.",0.3333,0.6667,0.4000,0.8000,"Counts: dev 5/15 Hit@1 and 10/15 Evidence Hit@3; test 2/5 and 4/5. 124 chunks; vector embeddings reused from B; store upsert 0.132 s; $0. Hypothesis recorded after the run, not preregistered."
