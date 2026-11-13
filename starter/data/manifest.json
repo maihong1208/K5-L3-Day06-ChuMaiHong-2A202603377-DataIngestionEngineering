@@ -195,7 +195,7 @@
       "extraction_method": "pypdf 6.21.4; Unicode NFC and whitespace normalization; page numbers remain physical 1-based PDF page numbers.",
       "extraction_notes": [
         "All 35 selected pages yielded extractable text and contained at least 1,476 normalized characters.",
-        "pypdf reported an incorrect startxref pointer and object-stream decompression errors while opening the PDF. Page text was extracted, but the original PDF should be visually spot-checked before final submission."
+        "pypdf reported an incorrect startxref pointer and object-stream decompression errors while opening the PDF. All selected page text was extracted. The author visually checked the PDF and confirmed it remains readable; the parser warnings did not prevent reading the document."
       ]
     }
   ]

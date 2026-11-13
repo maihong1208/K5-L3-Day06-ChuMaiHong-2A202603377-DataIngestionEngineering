@@ -1,6 +1,6 @@
 # Báo cáo cá nhân — Day 06: Data Ingestion Engineering
 
-> **Còn chờ trước khi nộp:** spot-check trực quan một số trang PDF do pypdf từng báo lỗi cấu trúc. Các nhãn audit AI-assisted đã được bạn rà soát và chấp nhận; chưa có người chấm độc lập thứ hai.
+> **Trạng thái:** tác giả đã rà soát và chấp nhận nhãn audit AI-assisted, đồng thời xác nhận PDF vẫn đọc được bình thường khi kiểm tra. Chưa có người chấm độc lập thứ hai.
 
 ## Thông tin người nộp
 
@@ -16,7 +16,7 @@
 - **Nguồn/quyền:** tài liệu từ OWASP GenAI Security Project, giấy phép CC BY-SA 4.0 theo thông tin trên PDF. Manifest ghi attribution và yêu cầu chia sẻ bản phái sinh theo cùng giấy phép.
 - **Trang:** PDF có 45 trang vật lý; dùng 35 trang nội dung, trang 7–13 và 15–42. Loại trang 14 vì là danh sách tham chiếu ngắn. Tổng text chuẩn hóa là 78.077 ký tự; mọi trang được chọn đều trích xuất được.
 - **Chuẩn hóa/truy vết:** pypdf 6.21.4; Unicode NFC và chuẩn hóa whitespace; giữ số trang vật lý 1-based. Metadata section được lấy từ heading trên PDF và áp dụng đến heading kế tiếp.
-- **Lỗi/giới hạn xử lý:** pypdf báo `incorrect startxref pointer` và lỗi giải nén object stream khi mở PDF. Các trang được trích xuất thành công, nhưng cần spot-check trực quan một số trang trước khi nộp.
+- **Lỗi/giới hạn xử lý:** pypdf báo `incorrect startxref pointer` và lỗi giải nén object stream khi mở PDF. Các trang được trích xuất thành công; tác giả đã kiểm tra và xác nhận PDF vẫn đọc được bình thường. Cảnh báo parser vẫn được ghi nhận để minh bạch.
 - **Embedding:** `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`, Sentence Transformers 5.7.0, CPU, 384 chiều; cùng model dùng cho query và document; không dùng API key, chi phí API $0. Model revision trong summary hiện là `null`, nên cần pin revision nếu muốn tái lập tuyệt đối.
 - **Vector store:** Chroma PersistentClient 1.5.9, cosine distance, approximate HNSW; lưu tại `starter/results/chroma/`.
 - **Metadata:** `document_id`, `source`, `page`, `section`. `section` được kiểm chứng từ heading trong PDF, hữu ích để lọc theo LLM01–LLM10; `source` và `page` hỗ trợ truy vết/citation.
