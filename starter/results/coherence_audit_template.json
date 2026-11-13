@@ -358,9 +358,9 @@
     }
   ],
   "review_note": {
-    "reviewer": "Copilot AI assistant",
-    "method": "Inspected the sampled chunk text at each preselected source position using the supplied 0?2 rubric.",
-    "limitation": "Single AI-assisted reviewer; not an independent human annotation. A human spot-check is recommended for borderline boundary cases."
+    "reviewer": "Chu Mai H?ng (author), reviewed and confirmed the Copilot AI-assisted draft",
+    "method": "Copilot AI assistant generated the initial labels; the author reviewed the scores and reasons for all sampled positions and confirmed them without requesting changes.",
+    "limitation": "Single author confirmation; no independent second human rater. Potential confirmation bias remains."
   },
   "summary": {
     "A": {

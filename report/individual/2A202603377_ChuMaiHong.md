@@ -1,6 +1,6 @@
 # Báo cáo cá nhân — Day 06: Data Ingestion Engineering
 
-> **Còn chờ trước khi nộp:** tạo commit cuối rồi điền commit hash bên dưới; spot-check các nhãn audit AI-assisted và một số trang PDF. Các thông tin cá nhân và tên file đã được điền theo thông tin hiện có.
+> **Còn chờ trước khi nộp:** spot-check trực quan một số trang PDF do pypdf từng báo lỗi cấu trúc. Các nhãn audit AI-assisted đã được bạn rà soát và chấp nhận; chưa có người chấm độc lập thứ hai.
 
 ## Thông tin người nộp
 
@@ -86,7 +86,7 @@ A/B không lọc theo thiết kế, nên các hit ngoài section là giới hạ
 | B | 0 | 0 | 5 | 2,0 |
 | C | 0 | 0 | 5 | 2,0 |
 
-Các nhãn và lý do từng câu nằm trong `starter/results/manual_audit_template.json`. Đây là lượt rà soát AI-assisted; tác giả cần kiểm tra và xác nhận trước khi nộp.
+Các nhãn và lý do từng câu nằm trong `starter/results/manual_audit_template.json`. Nhãn ban đầu được tạo với hỗ trợ AI và đã được tác giả rà soát, chấp nhận; không có người chấm độc lập thứ hai nên vẫn có nguy cơ thiên lệch xác nhận.
 
 ### 5. Tác động chiến lược dữ liệu và kết luận
 
@@ -94,7 +94,7 @@ Các nhãn và lý do từng câu nằm trong `starter/results/manual_audit_temp
 - **B so với C:** cùng chunking và vectors nên số chunk và retrieval accuracy bằng nhau. C đảm bảo top-3 của cả q17 và q20 nằm trong section yêu cầu (6/6 hit); B không lọc nên lẫn section khác. C phù hợp khi phạm vi section là đầu vào đáng tin cậy; B phù hợp truy vấn không có filter và là cấu hình được chọn trên dev.
 - **Lựa chọn:** B được chọn trên dev theo quy tắc tie-break đã định. Trên test nhỏ này, C bằng B về Evidence Hit@3 và Hit@1; lợi thế của C thể hiện ở tuân thủ phạm vi filter, không phải tỷ lệ hit cao hơn.
 - **Ví dụ lỗi filter:** q20 ở B trả về một chunk trang 40 thuộc LLM10 nhưng các chunk khác thuộc LLM04/LLM07. C lọc `LLM10:2025` nên cả top-3 thuộc đúng section. Đây là ví dụ tác động metadata filter, không phải lỗi metadata.
-- **Giới hạn:** chỉ một tài liệu và 35 trang, test có 5 câu nên không suy rộng kết quả; thời gian CPU rất nhỏ và có nhiễu; chưa có bước sinh câu trả lời LLM; pypdf có cảnh báo cấu trúc; manual audit hiện do một lượt AI-assisted thực hiện, chưa phải đánh giá độc lập của tác giả. Cần xác nhận nhãn và spot-check PDF trước khi nộp.
+- **Giới hạn:** chỉ một tài liệu và 35 trang, test có 5 câu nên không suy rộng kết quả; thời gian CPU rất nhỏ và có nhiễu; chưa có bước sinh câu trả lời LLM; pypdf có cảnh báo cấu trúc; nhãn ban đầu do AI hỗ trợ và được tác giả xác nhận, nhưng chưa có người chấm độc lập thứ hai.
 - **Cải tiến nếu làm lại:** chốt/pin revision embedding model, xác minh PDF trực quan, ghi giả thuyết trước khi chạy vào experiment log và bổ sung người chấm độc lập hoặc vòng đối soát nhãn.
 
 ## Vị trí artifacts

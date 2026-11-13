@@ -1322,9 +1322,9 @@
     }
   ],
   "review_note": {
-    "reviewer": "Copilot AI assistant",
-    "method": "Inspected each test top-3 passage against expected answers/evidence and checked document_id, source, physical page and section against the manifest.",
-    "limitation": "Single AI-assisted reviewer; not an independent human annotation. Treat borderline scores as subject to human spot-check."
+    "reviewer": "Chu Mai H?ng (author), reviewed and confirmed the Copilot AI-assisted draft",
+    "method": "Copilot AI assistant generated the initial labels; the author reviewed the completed test top-3 ratings and reasons and confirmed them without requesting changes.",
+    "limitation": "Single author confirmation; no independent second human rater. Potential confirmation bias remains."
   },
   "grounding_summary": {
     "A": {
