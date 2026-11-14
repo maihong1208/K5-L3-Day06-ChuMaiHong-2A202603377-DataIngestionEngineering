@@ -30,9 +30,9 @@
             "char_start": 450
           },
           "score": 0.8155663013458252,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -50,9 +50,9 @@
             "char_start": 900
           },
           "score": 0.655103325843811,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -70,9 +70,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.6135594248771667,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -122,9 +122,9 @@
             "section": "LLM08:2025"
           },
           "score": 0.6738991737365723,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -142,9 +142,9 @@
             "page": 34
           },
           "score": 0.6123278141021729,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -162,9 +162,9 @@
             "char_start": 900
           },
           "score": 0.5640276670455933,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -210,9 +210,9 @@
             "section": "LLM09:2025"
           },
           "score": 0.7932785749435425,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -230,9 +230,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.5973730683326721,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -250,9 +250,9 @@
             "chunk_strategy": "fixed"
           },
           "score": 0.5713512897491455,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -298,9 +298,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.6946595907211304,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -318,9 +318,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.594588041305542,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -338,9 +338,9 @@
             "char_start": 1350
           },
           "score": 0.5944989919662476,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -390,9 +390,9 @@
             "chunk_index": 0
           },
           "score": 0.5073256492614746,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -410,9 +410,9 @@
             "page": 32
           },
           "score": 0.4974935054779053,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -430,9 +430,9 @@
             "chunk_strategy": "fixed"
           },
           "score": 0.4907262325286865,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -477,9 +477,9 @@
             "chunk_index": 1
           },
           "score": 0.7584444284439087,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -496,9 +496,9 @@
             "chunk_strategy": "paragraph"
           },
           "score": 0.7001274824142456,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -515,9 +515,9 @@
             "page": 30
           },
           "score": 0.6593042612075806,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -566,9 +566,9 @@
             "section": "LLM08:2025"
           },
           "score": 0.5699154138565063,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -585,9 +585,9 @@
             "chunk_strategy": "paragraph"
           },
           "score": 0.5323705673217773,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -604,9 +604,9 @@
             "chunk_strategy": "paragraph"
           },
           "score": 0.5068758130073547,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -651,9 +651,9 @@
             "chunk_index": 1
           },
           "score": 0.5415953397750854,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -670,9 +670,9 @@
             "chunk_strategy": "paragraph"
           },
           "score": 0.5146857500076294,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -689,9 +689,9 @@
             "section": "LLM04:2025"
           },
           "score": 0.5029455423355103,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -736,9 +736,9 @@
             "page": 21
           },
           "score": 0.5932043790817261,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -755,9 +755,9 @@
             "page": 37
           },
           "score": 0.5893809199333191,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -774,9 +774,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.5846271514892578,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -825,9 +825,9 @@
             "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
           },
           "score": 0.5589818358421326,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -844,9 +844,9 @@
             "page": 21
           },
           "score": 0.49636536836624146,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -863,9 +863,9 @@
             "chunk_strategy": "paragraph"
           },
           "score": 0.47522085905075073,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -910,9 +910,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.7584444284439087,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -929,9 +929,9 @@
             "chunk_strategy": "paragraph"
           },
           "score": 0.7001274824142456,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -948,9 +948,9 @@
             "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
           },
           "score": 0.6593042612075806,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -999,9 +999,9 @@
             "chunk_index": 2
           },
           "score": 0.5699154138565063,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1018,9 +1018,9 @@
             "chunk_index": 0
           },
           "score": 0.5323705673217773,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1037,9 +1037,9 @@
             "page": 35
           },
           "score": 0.4892929792404175,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -1084,9 +1084,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.5415953397750854,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1103,9 +1103,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.5146857500076294,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1122,9 +1122,9 @@
             "chunk_index": 2
           },
           "score": 0.5029455423355103,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -1169,9 +1169,9 @@
             "char_count": 695
           },
           "score": 0.5932043790817261,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1188,9 +1188,9 @@
             "chunk_index": 1
           },
           "score": 0.5893809199333191,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1207,9 +1207,9 @@
             "page": 37
           },
           "score": 0.5846271514892578,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
@@ -1258,9 +1258,9 @@
             "char_count": 739
           },
           "score": 0.5589818358421326,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1277,9 +1277,9 @@
             "source": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
           },
           "score": 0.4666635990142822,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         },
@@ -1296,9 +1296,9 @@
             "document_id": "owasp-llm-top-10-2025"
           },
           "score": 0.44954049587249756,
-          "source_correct": null,
-          "page_correct": null,
-          "section_correct": null,
+          "source_correct": true,
+          "page_correct": true,
+          "section_correct": true,
           "evidence_sufficient": null,
           "notes": ""
         }
